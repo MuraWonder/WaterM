@@ -27,8 +27,8 @@ public class AutoParallax : MonoBehaviour
 
         pos.x -= realVelocity * Time.fixedDeltaTime;
 
-        if (pos.x <= -70)
-            pos.x = 40;
+        if (pos.x <= -50)
+            pos.x = 30;
 
         transform.position = pos;
     }

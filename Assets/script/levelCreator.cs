@@ -38,7 +38,7 @@ private GameObject bgLayer;
         collectedTiles.transform.position = new Vector2(-80.0f,-50.0f);
         tilePos = GameObject.Find("startTilePosition");
         startUpPosY = tilePos.transform.position.y;
-        outofbounceX = tilePos.transform.position.x - 20.0f;//2 離開場景
+        outofbounceX = tilePos.transform.position.x - 30.0f;//2 離開場景
 
         fillScene();
 
