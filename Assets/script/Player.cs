@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public static float s_maxHealth2; //扣血
     public static float health2;  //當前血
     [SerializeField]
-    bool canMove = true;    // 學長加的，玩家是否可移動
+    public bool canMove = true;    // 學長加的，玩家是否可移動
 
     // Start is called before the first frame update
     void Start()
@@ -57,29 +57,29 @@ public class Player : MonoBehaviour
                 Vector3 vector3 = new Vector3(gameObject.transform.position.x - speed * Time.deltaTime, gameObject.transform.position.y, 0);
                 gameObject.transform.position = vector3;
                 move = true; //有在動的提示
-                transform.localScale = Vector3.Scale(originScale, new Vector3(1, 1, 1));
+                transform.localScale = Vector3.Scale(originScale, new Vector3(-1, 1, 1));
             }
             if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
                 Vector3 vector3 = new Vector3(gameObject.transform.position.x + speed * Time.deltaTime, gameObject.transform.position.y, 0);
                 gameObject.transform.position = vector3;
                 move = true;
-                transform.localScale = Vector3.Scale(originScale, new Vector3(-1, 1, 1));
+                transform.localScale = Vector3.Scale(originScale, new Vector3(1, 1, 1));
             }
             if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.D))
             { move = false; }
             if (move == true) //有在動就播動畫
             {
-                anim.Play("Run");
+               // anim.Play("MainRun");
             }
             else
             {
-                anim.Play("Breath");
+                //anim.Play("MainBreath");
             }
         }
         else
         {
-            anim.Play("Breath");
+            //anim.Play("MainBreath");
         }
     }
     

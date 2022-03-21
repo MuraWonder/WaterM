@@ -67,9 +67,9 @@ private GameObject bgLayer;
 					child.gameObject.transform.position = collectedTiles.transform.Find("b").transform.position;
 					child.gameObject.transform.parent = collectedTiles.transform.Find("b").transform;
 					break;
-                // default:
-				// 	Destroy(child.gameObject);
-				// 	break;
+                 default:
+					Destroy(child.gameObject);
+			     	break;
              }
 
 
