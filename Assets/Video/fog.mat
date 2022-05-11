@@ -56,8 +56,7 @@ Material:
     - Vector1_821077cfbb6b4e67bc073196148ed6eb: 5
     - _EnableExternalAlpha: 0
     m_Colors:
-    - Color_73635392ee7347cf88b5b91eb4932e24: {r: 1, g: 0.6418347, b: 0.56037736,
-        a: 0}
+    - Color_73635392ee7347cf88b5b91eb4932e24: {r: 1, g: 1, b: 1, a: 0}
     - Color_cf56f31d282846f096ed073df17dc30f: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_e5347752a0d04500bd99db6548bca20b: {r: 0.2, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

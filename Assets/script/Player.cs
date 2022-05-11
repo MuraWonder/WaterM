@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
-{
+{   //public GameObject player; //為了強制移動而加
     public float speed;
     public float jumpHigh; //外加跳躍
     Vector3 originScale;
     bool move;
-    private Animator anim;
+    //public Animator anim;
 
     public float maxHealth;
     public static float s_maxHealth;
@@ -22,11 +23,12 @@ public class Player : MonoBehaviour
     public static float health2;  //當前血
     [SerializeField]
     public bool canMove = true;    // 學長加的，玩家是否可移動
+    public GameObject tokei;
 
     // Start is called before the first frame update
     void Start()
-    {
-        anim = GetComponent<Animator>();
+    {   //player.GetComponent<Talkmove>();
+        //anim = GetComponent<Animator>();
         originScale = transform.localScale;
 
        if(s_maxHealth==0){
@@ -52,34 +54,36 @@ public class Player : MonoBehaviour
                 move = true;
                 transform.localScale = Vector3.Scale(originScale, new Vector3(1, 1, 1));
             }
-            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-            {
-                Vector3 vector3 = new Vector3(gameObject.transform.position.x - speed * Time.deltaTime, gameObject.transform.position.y, 0);
-                gameObject.transform.position = vector3;
-                move = true; //有在動的提示
-                transform.localScale = Vector3.Scale(originScale, new Vector3(-1, 1, 1));
-            }
-            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-            {
-                Vector3 vector3 = new Vector3(gameObject.transform.position.x + speed * Time.deltaTime, gameObject.transform.position.y, 0);
-                gameObject.transform.position = vector3;
-                move = true;
-                transform.localScale = Vector3.Scale(originScale, new Vector3(1, 1, 1));
-            }
-            if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.D))
-            { move = false; }
+            // if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+            // {
+            //     Vector3 vector3 = new Vector3(gameObject.transform.position.x - speed * Time.deltaTime, gameObject.transform.position.y, 0);
+            //     gameObject.transform.position = vector3;
+            //     move = true; //有在動的提示
+            //     transform.localScale = Vector3.Scale(originScale, new Vector3(-1, 1, 1));
+            // }
+            // if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+            // {
+            //     Vector3 vector3 = new Vector3(gameObject.transform.position.x + speed * Time.deltaTime, gameObject.transform.position.y, 0);
+            //     gameObject.transform.position = vector3;
+            //     move = true;
+            //     transform.localScale = Vector3.Scale(originScale, new Vector3(1, 1, 1));
+            // }
+            // if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.D))
+            // { move = false; }
             if (move == true) //有在動就播動畫
             {
-               // anim.Play("MainRun");
+                //anim.Play("Run");
             }
             else
             {
-                //anim.Play("MainBreath");
+                //anim.Play("Breath");
             }
         }
         else
-        {
-            //anim.Play("MainBreath");
+        {  
+            //  if(player.GetComponent<Talkmove>().force == true)
+            // {anim.Play("Run");}
+            //anim.Play("Breath");
         }
     }
     
@@ -90,14 +94,28 @@ public class Player : MonoBehaviour
         canMove = b;
     }
 
+    public void Move(bool b)  // yee
+    {
+        move = b;
+    }
+
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag=="Obstacle"){
             health -= 2.0f;
         }
-        if(other.gameObject.tag=="Wronganswer"){
-            health2-= 2.0f;
-        }
+        // if(other.gameObject.tag=="Wronganswer"){
+        //     health2-= 2.0f;
+        // }
+        //之前問答血量
+    
         
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag=="Plustime")
+        {
+            tokei.GetComponent<Timer>().currenttime += 5.0f;
+        }
     }
    
 }

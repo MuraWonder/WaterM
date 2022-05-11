@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Talkmove : MonoBehaviour
 {   public Transform target;
-    public float t;
+    //public float t;
     public float speed;
     private GameObject player;
+    public bool force;
     
 
     
@@ -24,10 +25,13 @@ public class Talkmove : MonoBehaviour
       Vector3 a = transform.position;
       Vector3 b = target.position;
       transform.position = Vector3.MoveTowards(a,b,speed);
-      player.GetComponent<Player>().canMove = false;
+      player.GetComponent<PlayerCanMove>().canMove = false;
+      force=true;
+      player.GetComponent<PlayerCanMove>().anim.Play("Run");
       if(a.x == b.x){
-        player.GetComponent<Player>().canMove = true;
+        player.GetComponent<PlayerCanMove>().canMove = true;
       this.enabled = false;
+      force=false;
       }
 
 

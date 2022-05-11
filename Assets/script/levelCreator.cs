@@ -5,7 +5,7 @@ using UnityEngine;
 public class levelCreator : MonoBehaviour
 {   private GameObject tilePos;
 private float startUpPosY;
-private const float tileWidth = 21f;
+private const float tileWidth = 23f; //21 3D
 private int heightLevel = 0;
 private GameObject tmpTile;
 
@@ -28,12 +28,18 @@ private GameObject bgLayer;
         //bgLayer = GameObject.Find("backgroundLayer"); //2
         collectedTiles = GameObject.Find("tiles");
         for(int i=0; i<20; i++){
-           GameObject tmpg1 = Instantiate(Resources.Load("pre1",typeof(GameObject)))as GameObject; //pre東西
+           GameObject tmpg1 = Instantiate(Resources.Load("PreS",typeof(GameObject)))as GameObject; //pre東西
            tmpg1.transform.parent =collectedTiles.transform.Find("1").transform; //資料夾位置
-           GameObject tmpG2 = Instantiate(Resources.Load("pre2",typeof(GameObject)))as GameObject;
+           tmpg1.transform.position = Vector2.zero; //?東西
+           GameObject tmpG2 = Instantiate(Resources.Load("PreM",typeof(GameObject)))as GameObject;
            tmpG2.transform.parent =collectedTiles.transform.Find("2").transform;
-           GameObject tmpG3 = Instantiate(Resources.Load("blank",typeof(GameObject)))as GameObject;
-           tmpG3.transform.parent =collectedTiles.transform.Find("b").transform;
+           tmpG2.transform.position = Vector2.zero;
+           GameObject tmpG3 = Instantiate(Resources.Load("PreE",typeof(GameObject)))as GameObject; //3d
+           tmpG3.transform.parent =collectedTiles.transform.Find("3").transform;
+           tmpG3.transform.position = Vector2.zero;
+           GameObject tmpG4 = Instantiate(Resources.Load("blank",typeof(GameObject)))as GameObject;
+           tmpG4.transform.parent =collectedTiles.transform.Find("b").transform;
+           tmpG4.transform.position = Vector2.zero;
         }
         collectedTiles.transform.position = new Vector2(-80.0f,-50.0f);
         tilePos = GameObject.Find("startTilePosition");
@@ -55,17 +61,21 @@ private GameObject bgLayer;
 
              switch(child.gameObject.name){
 					
-				case "pre1(Clone)":
+				case "PreS(Clone)":
 					child.gameObject.transform.position = collectedTiles.transform.Find("1").transform.position;
 					child.gameObject.transform.parent = collectedTiles.transform.Find("1").transform;
 					break;
-				case "pre2(Clone)":
-					child.gameObject.transform.position = collectedTiles.transform.Find("2").transform.position;
-					child.gameObject.transform.parent = collectedTiles.transform.Find("2").transform;
+				case "PreE(Clone)":
+					child.gameObject.transform.position = collectedTiles.transform.Find("3").transform.position;
+					child.gameObject.transform.parent = collectedTiles.transform.Find("3").transform;
 					break;
                 case "blank(Clone)":
 					child.gameObject.transform.position = collectedTiles.transform.Find("b").transform.position;
 					child.gameObject.transform.parent = collectedTiles.transform.Find("b").transform;
+					break;
+                case "PreM(Clone)":
+					child.gameObject.transform.position = collectedTiles.transform.Find("2").transform.position;
+					child.gameObject.transform.parent = collectedTiles.transform.Find("2").transform;   //3d
 					break;
                  default:
 					Destroy(child.gameObject);
@@ -91,14 +101,14 @@ private GameObject bgLayer;
 
 public void setTile(string type){
     switch (type){
-        // case "left":
-        // tmpTile = collectedTiles.transform.Find("1").transform.GetChild(0).gameObject;
-        // break;
+        case "left":
+        tmpTile = collectedTiles.transform.Find("1").transform.GetChild(0).gameObject;
+        break;
         case "right":
-        tmpTile = collectedTiles.transform.Find("2").transform.GetChild(0).gameObject;
+        tmpTile = collectedTiles.transform.Find("3").transform.GetChild(0).gameObject; //3d
         break; 
         case "middle":
-        tmpTile = collectedTiles.transform.Find("1").transform.GetChild(0).gameObject;
+        tmpTile = collectedTiles.transform.Find("2").transform.GetChild(0).gameObject; //3d
         break;
         case "blank":
         tmpTile = collectedTiles.transform.Find("b").transform.GetChild(0).gameObject;
@@ -106,8 +116,8 @@ public void setTile(string type){
     }
     tmpTile.transform.parent = gameLayer.transform;
     tmpTile.transform.position = new Vector2(tilePos.transform.position.x+(tileWidth/2),startUpPosY+(heightLevel*tileWidth/7));
-    tilePos = tmpTile;
-    lastTile = type;//2
+    tilePos = tmpTile;  
+    lastTile = type;//2    tilewidth/2 && 後面的tileWidth/7
 }
 
 
@@ -129,12 +139,12 @@ public void setTile(string type){
         if (lastTile == "blank") {
 
 			changeHeight();
-			setTile("middle");
+			setTile("left"); //3d
 			middleCounter = (int)Random.Range(1,2);
 
 		}else if(lastTile =="right"){
 
-			blankCounter = (int)Random.Range(1,2);
+			blankCounter = (int)Random.Range(1,2); //3為二連跳
 		}else if(lastTile == "middle"){
 			setTile("right");
 		}

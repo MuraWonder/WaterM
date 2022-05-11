@@ -10,7 +10,7 @@ public class AutoParallax : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("player 1").GetComponent<Player>();
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     // Start is called before the first frame update
