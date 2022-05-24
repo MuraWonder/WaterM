@@ -24,12 +24,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     public bool canMove = true;    // 學長加的，玩家是否可移動
     public GameObject tokei;
+    private Rigidbody2D RB;//防止翻轉
+    public AudioSource collectSound;//播放蒐集聲音
+    public AudioSource hitSound;
 
     // Start is called before the first frame update
     void Start()
     {   //player.GetComponent<Talkmove>();
         //anim = GetComponent<Animator>();
         originScale = transform.localScale;
+        RB.freezeRotation = true;
 
        if(s_maxHealth==0){
            health = maxHealth;
@@ -114,7 +118,17 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.tag=="Plustime")
         {
-            tokei.GetComponent<Timer>().currenttime += 5.0f;
+            tokei.GetComponent<Timer>().currenttime += 10.0f;
+            collectSound.Play();
+            ScoreSystem.theScore += 100;
+            ScoreSystem.theCollect += 1;
+            Destroy(other.gameObject);
+        }
+         if(other.gameObject.tag=="Obstacle")
+        {
+            tokei.GetComponent<Timer>().currenttime -= 5.0f;
+            hitSound.Play();
+            Destroy(other.gameObject);
         }
     }
    
