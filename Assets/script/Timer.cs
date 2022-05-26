@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public float Starttime;
     public float currenttime;
     //static float Starttime;
+    public GameOverScreen GameOverScreen;//呼喚gameover的畫面
     
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,9 @@ public class Timer : MonoBehaviour
         if(currenttime<=0)
         {
             currenttime = 0;
+            GameOverScreen.Setup();
         }
+
+        
     }
 }

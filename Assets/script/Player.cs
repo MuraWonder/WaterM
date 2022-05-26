@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     public bool canMove = true;    // 學長加的，玩家是否可移動
     public GameObject tokei;
     private Rigidbody2D RB;//防止翻轉
-    public AudioSource collectSound;//播放蒐集聲音
+    public AudioSource collectSound;//播放蒐集的聲音
     public AudioSource hitSound;
 
     // Start is called before the first frame update
@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
                 gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpHigh;
                 move = true;
                 transform.localScale = Vector3.Scale(originScale, new Vector3(1, 1, 1));
+                
             }
             // if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             // {
@@ -111,8 +112,6 @@ public class Player : MonoBehaviour
         //     health2-= 2.0f;
         // }
         //之前問答血量
-    
-        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

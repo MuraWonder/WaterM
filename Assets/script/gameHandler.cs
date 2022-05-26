@@ -4,13 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class gameHandler : MonoBehaviour
-{
+{   
     public Camfollow camfollow;
-    public Transform playerTransform;
+    public Transform playerTransform; //名稱欄位叫Transform 實際為gameobject的空格 在這叫做playerTransform
 
     public Slider progressSlider; // 進度
-    public float endTime = 20f;
-    float hasRunTime=0f;
+    public float endTime = 20f; //結束時間 外面可調設定
+    float hasRunTime=0f; //目前跑了多久
+    
+    
+    
     private void Start()
     {
         camfollow.Setup(()=>playerTransform.position);
@@ -30,6 +33,7 @@ public class gameHandler : MonoBehaviour
     void LateUpdate()
     {
        camfollow.transform.position = new Vector3(playerTransform.transform.position.x +4,camfollow.transform.position.y,camfollow.transform.position.z);
-        
+       
     }
+   
 }
