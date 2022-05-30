@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D RB;//防止翻轉
     public AudioSource collectSound;//播放蒐集的聲音
     public AudioSource hitSound;
+    public GameOverScreen GameOverScreen;//呼喚gameover的畫面
 
     // Start is called before the first frame update
     void Start()
@@ -128,6 +129,10 @@ public class Player : MonoBehaviour
             tokei.GetComponent<Timer>().currenttime -= 5.0f;
             hitSound.Play();
             Destroy(other.gameObject);
+        }
+        if(other.gameObject.tag=="DeathZone")
+        {
+            GameOverScreen.Setup();
         }
     }
    
