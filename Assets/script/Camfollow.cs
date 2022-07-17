@@ -15,7 +15,7 @@ public class Camfollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {   
         Vector3 CamfollowPosition = GetCamfollowPositionFunc();
         CamfollowPosition.z= transform.position.z;

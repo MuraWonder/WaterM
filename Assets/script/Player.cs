@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     void Start()
     {   //player.GetComponent<Talkmove>();
         //anim = GetComponent<Animator>();
+        GameOverScreen.GetComponent<GameOverScreen>().isblack = false;
         originScale = transform.localScale;
         RB.freezeRotation = true;
 
@@ -91,6 +92,8 @@ public class Player : MonoBehaviour
             // {anim.Play("Run");}
             //anim.Play("Breath");
         }
+        if(tokei.GetComponent<Timer>().currenttime==0)
+        {GameOverScreen.Setup();}
     }
     
 

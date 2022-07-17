@@ -89,7 +89,7 @@ public class PlayerCanMove : MonoBehaviour
 
 
     public void SetCanMove(bool b)  // 學長加的，設定是否可移動
-    {
+    {   anim.Play("Breath");
         canMove = b;
     }
 

@@ -20,12 +20,12 @@ public class AutoParallax : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         float realVelocity = player.speed / depth;
         Vector2 pos = transform.position;
 
-        pos.x -= realVelocity * Time.fixedDeltaTime;
+        pos.x -= realVelocity * Time.deltaTime;
 
         if (pos.x <= -70)
             pos.x = 40;

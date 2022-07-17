@@ -125,6 +125,6 @@ MonoBehaviour:
   itemMax: 4
   itemMin: 1
   itemPrefabs:
-  - {fileID: 5545747096225257978, guid: 5b4d2aba8b487dc41b2536b9d717327c, type: 3}
+  - {fileID: 2529777236549823551, guid: 1c981aaddc4d0dc48adce97fb4235a4f, type: 3}
   itemSpawnCenter: {x: -0.21, y: 6.06}
   itemSpawnArea: {x: 18.94, y: 10.74}

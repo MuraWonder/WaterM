@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obstacle
-  - Wronganswer
-  - Plustime
   - DeathZone
+  - Obstacle
+  - Plustime
   layers:
   - Default
   - TransparentFX
@@ -15,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - PP
-  - Floor
+  - 
+  - 
   - 
   - 
   - 
@@ -44,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Character
+    uniqueID: 785672837
     locked: 0

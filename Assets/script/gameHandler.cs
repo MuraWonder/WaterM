@@ -23,7 +23,7 @@ public class gameHandler : MonoBehaviour
         progressSlider.value=hasRunTime/endTime;
         if(hasRunTime>=endTime){
             // 結算
-            UnityEngine.SceneManagement.SceneManager.LoadScene("01");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("End");
         }
         
         hasRunTime+=Time.deltaTime;

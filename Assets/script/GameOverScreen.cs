@@ -7,24 +7,28 @@ using UnityEngine.UI;
 
 public class GameOverScreen : MonoBehaviour
 {  public bool isblack = false;
+   public GameObject UI;
     // Start is called before the first frame update
   void Start(){
+      
+    
     Resume();
     }
   void Update(){
       if(isblack == true){
           Debug.Log("true");
           Pause();
+          UI.SetActive(true);
       }
       if(isblack == false)
-      {   
+      {   UI.SetActive(false);
           Resume();
       }
       
   }
   public void Setup(){
       
-      gameObject.SetActive(true);
+      UI.SetActive(true);
       isblack=true;
       
       
@@ -40,9 +44,12 @@ public class GameOverScreen : MonoBehaviour
   public void RetryButton()
   {   isblack = false;
       Debug.Log("false");
-      UnityEngine.SceneManagement.SceneManager.LoadScene("01");
+      
       ScoreSystem.theScore = 0;
       ScoreSystem.theCollect = 0;
+      Resume();
+      UnityEngine.SceneManagement.SceneManager.LoadScene("01");
+      //gameObject.SetActive(false);
       
       
   }
@@ -51,6 +58,7 @@ public class GameOverScreen : MonoBehaviour
       UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
       ScoreSystem.theScore = 0;
       ScoreSystem.theCollect = 0;
+      //gameObject.SetActive(false);
       
       
   }
