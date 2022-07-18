@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour
     public GameObject[] itemPrefabs;    // 生成物件
     public Vector2 itemSpawnCenter;// 生成的中心點
     public Vector2 itemSpawnArea;    // 物件生成的範圍
+    public Transform Head,Tail; //地形頭跟尾
 
     // 設定方塊
     public void Setup()

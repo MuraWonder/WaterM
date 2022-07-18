@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
     public float jumpHigh; //外加跳躍
     Vector3 originScale;
     bool move;
+    public Image Emotion; //鰾情
+    public Sprite dEmotionSprite; //正常鰾情
+    public Sprite hEmotionSprite; //撞到障礙表情
+
+
     //public Animator anim;
 
     public float maxHealth;
@@ -108,15 +113,6 @@ public class Player : MonoBehaviour
         move = b;
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag=="Obstacle"){
-            health -= 2.0f;
-        }
-        // if(other.gameObject.tag=="Wronganswer"){
-        //     health2-= 2.0f;
-        // }
-        //之前問答血量
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag=="Plustime")
@@ -132,11 +128,19 @@ public class Player : MonoBehaviour
             tokei.GetComponent<Timer>().currenttime -= 5.0f;
             hitSound.Play();
             Destroy(other.gameObject);
+            StartCoroutine(SetEmotion(2));
         }
         if(other.gameObject.tag=="DeathZone")
         {
             GameOverScreen.Setup();
         }
+    }
+    IEnumerator SetEmotion (float time)
+    {
+    Emotion.sprite = hEmotionSprite;   //狀表情
+    yield return new WaitForSeconds (time);//等秒數
+    Emotion.sprite = dEmotionSprite;  //喚回預設表情 
+
     }
    
 }
