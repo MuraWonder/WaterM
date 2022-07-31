@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 678284293}
   - component: {fileID: 678284292}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: "\u7D50\u675F"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2108692239}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: play
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 943049773}
   - component: {fileID: 943049772}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: "\u8A2D\u5B9A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 1060797699}
   - component: {fileID: 1060797702}
   m_Layer: 5
-  m_Name: Button
+  m_Name: "\u73A9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

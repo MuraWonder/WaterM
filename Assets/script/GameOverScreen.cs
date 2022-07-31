@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameOverScreen : MonoBehaviour
 {  public bool isblack = false;
    public GameObject UI;
+   public GameObject little;
     // Start is called before the first frame update
   void Start(){
       
@@ -15,14 +16,18 @@ public class GameOverScreen : MonoBehaviour
     Resume();
     }
   void Update(){
+      
       if(isblack == true){
           Debug.Log("true");
-          Pause();
+          //Pause();
           UI.SetActive(true);
+          little.SetActive(false);
       }
       if(isblack == false)
       {   UI.SetActive(false);
-          Resume();
+          little.SetActive(true);
+        
+          //Resume();
       }
       
   }
@@ -30,14 +35,15 @@ public class GameOverScreen : MonoBehaviour
       
       UI.SetActive(true);
       isblack=true;
+      Pause();
       
       
   }
-  void Resume()
+  public void Resume()
   {
       Time.timeScale = 1f;
   }
-  void Pause()
+  public void Pause()
   {
       Time.timeScale = 0f;
   }
@@ -59,8 +65,12 @@ public class GameOverScreen : MonoBehaviour
       ScoreSystem.theScore = 0;
       ScoreSystem.theCollect = 0;
       //gameObject.SetActive(false);
-      
-      
+        
   }
+
+   public void Exit()
+    {
+        Application.Quit(); 
+    }
  
 }
