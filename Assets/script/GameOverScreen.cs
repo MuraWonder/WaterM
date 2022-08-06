@@ -9,6 +9,7 @@ public class GameOverScreen : MonoBehaviour
 {  public bool isblack = false;
    public GameObject UI;
    public GameObject little;
+   public GameObject YesNoIngame;
     // Start is called before the first frame update
   void Start(){
       
@@ -69,8 +70,19 @@ public class GameOverScreen : MonoBehaviour
   }
 
    public void Exit()
+    {   
+        YesNoIngame.SetActive(true);
+        Pause();
+    }
+
+      public void Yes()
     {
         Application.Quit(); 
+    }
+    public void No()
+    {   
+        YesNoIngame.SetActive(false);
+        Resume();
     }
  
 }
