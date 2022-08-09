@@ -5843,6 +5843,8 @@ MonoBehaviour:
   blackWidth: 0.9
   TilePrefabs:
   - {fileID: 3881561062574188593, guid: cd5ee3e19d3bd4e46a36505c824cf4d3, type: 3}
+  - {fileID: 3881561062574188593, guid: b348cb9e71000a4428fc499723a6313d, type: 3}
+  - {fileID: 952155533268674314, guid: 6e8c0514de0a3ad4e959308c2d2a3b67, type: 3}
   lastTile: {fileID: 1988333749}
   gameSpeed: 12.22
 --- !u!1 &988385069
