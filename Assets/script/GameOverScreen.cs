@@ -9,6 +9,7 @@ public class GameOverScreen : MonoBehaviour
 {  public bool isblack = false;
    public GameObject UI;
    public GameObject little;
+   public GameObject Emoji;
    public GameObject YesNoIngame;
     // Start is called before the first frame update
   void Start(){
@@ -23,10 +24,12 @@ public class GameOverScreen : MonoBehaviour
           //Pause();
           UI.SetActive(true);
           little.SetActive(false);
+          Emoji.SetActive(false);
       }
       if(isblack == false)
       {   UI.SetActive(false);
           little.SetActive(true);
+          Emoji.SetActive(true);
         
           //Resume();
       }

@@ -33,4 +33,21 @@ public class Menu : MonoBehaviour
     {
         YesNo.SetActive(false);
     }
+     public void toSlevel()
+    {
+        SceneManager.LoadScene("SLevel");
+    }
+     public void Level01()
+    {
+        SceneManager.LoadScene("01");
+    }
+      public void Level02()
+    {
+        SceneManager.LoadScene("02");
+    }
+       public void backtoMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
 }

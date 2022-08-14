@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/Menu.unity
     guid: 08db0448902148748bf364bf5290d545
   - enabled: 1
-    path: Assets/01.unity
+    path: Assets/SLevel.unity
+    guid: 54953a8907890e74e8f9cbb555f18071
+  - enabled: 1
+    path: Assets/Level/01.unity
     guid: 85a1ca9df4ae9b449afa331216617077
   - enabled: 1
     path: Assets/End.unity
@@ -26,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Talk01.unity
     guid: ef3591e4e22154449b23b1644a4e9939
+  - enabled: 1
+    path: Assets/Level/02.unity
+    guid: 83274fcd9b64dd840a7a2178fcae23ba
   m_configObjects: {}
