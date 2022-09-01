@@ -43,7 +43,8 @@ public class Player : MonoBehaviour
         //anim = GetComponent<Animator>();
         GameOverScreen.GetComponent<GameOverScreen>().isblack = false;
         originScale = transform.localScale;
-        RB.freezeRotation = true;
+        //RB = GetComponent<RigidBody2D>();
+        //RB.freezeRotation = true;
 
        if(s_maxHealth==0){
            health = maxHealth;

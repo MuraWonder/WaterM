@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 2536824889031103019}
   - component: {fileID: 4277104153510779072}
   m_Layer: 0
-  m_Name: PreM 1
+  m_Name: "\u5751"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +232,6 @@ GameObject:
   - component: {fileID: 9141341441999136447}
   - component: {fileID: 530438936254517242}
   - component: {fileID: 8907296619223527329}
-  - component: {fileID: 7400362795815955540}
   m_Layer: 0
   m_Name: PreM
   m_TagString: Untagged
@@ -331,26 +330,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 44.866276, y: 28.518377}
   m_EdgeRadius: 0
---- !u!114 &7400362795815955540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7509222863266847909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6b088b37988eb843a6917413461d894, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemMax: 4
-  itemMin: 1
-  itemPrefabs:
-  - {fileID: 2529777236549823551, guid: 1c981aaddc4d0dc48adce97fb4235a4f, type: 3}
-  itemSpawnCenter: {x: -0.21, y: 6.06}
-  itemSpawnArea: {x: 18.94, y: 10.74}
-  Head: {fileID: 4261984188144823403}
-  Tail: {fileID: 8451447269029553364}
 --- !u!1 &8388427604895265661
 GameObject:
   m_ObjectHideFlags: 0
