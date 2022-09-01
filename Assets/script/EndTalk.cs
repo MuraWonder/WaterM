@@ -35,7 +35,7 @@ public class EndTalk : MonoBehaviour
     }
     void ChangeScene()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Talk01");
     }
 }
 

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float jumpHigh; //外加跳躍
     Vector3 originScale;
     bool move;
+    [Header("表情UI")]
     public Image Emotion; //鰾情
     public Sprite dEmotionSprite; //正常鰾情
     public Sprite hEmotionSprite; //撞到障礙表情
@@ -33,6 +34,8 @@ public class Player : MonoBehaviour
     public AudioSource collectSound;//播放蒐集的聲音
     public AudioSource hitSound;
     public GameOverScreen GameOverScreen;//呼喚gameover的畫面
+    
+    public AudioSource BGMusic; //宣告我有一格音樂
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +53,9 @@ public class Player : MonoBehaviour
            health2 = maxHealth2;
            s_maxHealth2 = maxHealth2;
        }
-
+       
+       
+     
     }
 
     // Update is called once per frame
@@ -98,7 +103,8 @@ public class Player : MonoBehaviour
             //anim.Play("Breath");
         }
         if(tokei.GetComponent<Timer>().currenttime==0)
-        {GameOverScreen.Setup();}
+        {BGMusic.Stop();
+         GameOverScreen.DvideoFirst();}
     }
     
 
@@ -118,6 +124,7 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag=="Plustime")
         {
             tokei.GetComponent<Timer>().currenttime += 1.0f;
+            collectSound.volume = 0.2f;
             collectSound.Play();
             ScoreSystem.theScore += 100;
             ScoreSystem.theCollect += 1;
@@ -125,14 +132,15 @@ public class Player : MonoBehaviour
         }
          if(other.gameObject.tag=="Obstacle")
         {
-            tokei.GetComponent<Timer>().currenttime -= 5.0f;
+            tokei.GetComponent<Timer>().currenttime -= 3.0f;
             hitSound.Play();
             Destroy(other.gameObject);
             StartCoroutine(SetEmotion(2));
         }
         if(other.gameObject.tag=="DeathZone")
-        {
-            GameOverScreen.Setup();
+        {   BGMusic.Stop();
+            GameOverScreen.DvideoFirst();
+
         }
     }
     IEnumerator SetEmotion (float time)

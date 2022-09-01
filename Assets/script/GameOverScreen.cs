@@ -2,15 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 
 
 public class GameOverScreen : MonoBehaviour
 {  public bool isblack = false;
+   [Header("出現GG時會隱藏的UI")]
    public GameObject UI;
    public GameObject little;
    public GameObject Emoji;
    public GameObject YesNoIngame;
+   [SerializeField]
+   public GameObject VideoPanel;
+   public VideoPlayer DvPlayer;
     // Start is called before the first frame update
   void Start(){
       
@@ -86,6 +91,18 @@ public class GameOverScreen : MonoBehaviour
     {   
         YesNoIngame.SetActive(false);
         Resume();
+    }
+    public void DvideoFirst()
+    {
+     VideoPanel.SetActive(true);
+     DvPlayer.loopPointReached += EndReached2;
+     DvPlayer.Play();
+     Pause();
+     
+    }
+    void EndReached2(VideoPlayer DvPlayer)
+    {   VideoPanel.SetActive(false);
+        isblack=true;
     }
  
 }

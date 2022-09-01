@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class NextScene : MonoBehaviour
 {
     // Start is called before the first frame update
+    //作弊按鈕
+    
     void Start()
     {
         
