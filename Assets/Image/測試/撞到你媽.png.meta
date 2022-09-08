@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: fd2fcb13163b6a0408c38e3424646893
+guid: c8173da48dd61084785e0e3c40093966
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6661816370720236948
-    second: mainLightmap_0
+      213: 3712230532319955364
+    second: "\u649E\u5230\u4F60\u5ABD_0"
   - first:
-      213: 2897967113140194911
-    second: mainLightmap_1
+      213: -2666941168137200111
+    second: "\u649E\u5230\u4F60\u5ABD_1"
   - first:
-      213: 7910726047932162250
-    second: mainLightmap_2
+      213: 583711133286044498
+    second: "\u649E\u5230\u4F60\u5ABD_2"
   - first:
-      213: 897189508075018748
-    second: mainLightmap_3
+      213: 5555382710624866950
+    second: "\u649E\u5230\u4F60\u5ABD_3"
   - first:
-      213: -8940134223984509041
-    second: mainLightmap_4
+      213: -4438603983443317887
+    second: "\u649E\u5230\u4F60\u5ABD_4"
   - first:
-      213: -6668825090182948159
-    second: mainLightmap_5
+      213: 2621279338120392049
+    second: "\u649E\u5230\u4F60\u5ABD_5"
   - first:
-      213: 4155811345863482667
-    second: mainLightmap_6
+      213: 2933669469317895123
+    second: "\u649E\u5230\u4F60\u5ABD_6"
   - first:
-      213: 5908133226052206070
-    second: mainLightmap_7
+      213: 700084525938195491
+    second: "\u649E\u5230\u4F60\u5ABD_7"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -42,7 +42,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: 0
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   streamingMipmaps: 0
@@ -127,169 +127,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mainLightmap_0
+      name: "\u649E\u5230\u4F60\u5ABD_0"
       rect:
         serializedVersion: 2
         x: 207
         y: 1297
         width: 618
         height: 993
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6a96508e497c83a0800000000000000
-      internalID: -6661816370720236948
+      spriteID: 4a94a4b300e748330800000000000000
+      internalID: 3712230532319955364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainLightmap_1
+      name: "\u649E\u5230\u4F60\u5ABD_1"
       rect:
         serializedVersion: 2
-        x: 1418
+        x: 1426
         y: 1297
-        width: 573
-        height: 981
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 553
+        height: 972
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5e4c7d3cb5a73820800000000000000
-      internalID: 2897967113140194911
+      spriteID: 11e115c332f1dfad0800000000000000
+      internalID: -2666941168137200111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainLightmap_2
+      name: "\u649E\u5230\u4F60\u5ABD_2"
       rect:
         serializedVersion: 2
-        x: 2714
-        y: 1303
-        width: 475
-        height: 975
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac02d628d6b88cd60800000000000000
-      internalID: 7910726047932162250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mainLightmap_3
-      rect:
-        serializedVersion: 2
-        x: 3913
-        y: 1329
-        width: 542
-        height: 961
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf9d405aa15737c00800000000000000
-      internalID: 897189508075018748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mainLightmap_4
-      rect:
-        serializedVersion: 2
-        x: 5149
-        y: 1303
-        width: 639
+        x: 2697
+        y: 1306
+        width: 510
         height: 987
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8f37174a434ee380800000000000000
-      internalID: -8940134223984509041
+      spriteID: 25394fede22c91800800000000000000
+      internalID: 583711133286044498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainLightmap_5
+      name: "\u649E\u5230\u4F60\u5ABD_3"
       rect:
         serializedVersion: 2
-        x: 350
-        y: 98
-        width: 548
-        height: 973
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3907
+        y: 1314
+        width: 559
+        height: 991
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cade66d9e29373a0800000000000000
-      internalID: -6668825090182948159
+      spriteID: 6825422442fa81d40800000000000000
+      internalID: 5555382710624866950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainLightmap_6
+      name: "\u649E\u5230\u4F60\u5ABD_4"
       rect:
         serializedVersion: 2
-        x: 1513
-        y: 104
-        width: 478
-        height: 973
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5128
+        y: 1294
+        width: 686
+        height: 1014
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2d1bbf86686ca930800000000000000
-      internalID: 4155811345863482667
+      spriteID: 18b2a3c9139e662c0800000000000000
+      internalID: -4438603983443317887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainLightmap_7
+      name: "\u649E\u5230\u4F60\u5ABD_5"
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 78
+        width: 586
+        height: 1002
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17dacbd7ba7a06420800000000000000
+      internalID: 2621279338120392049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u649E\u5230\u4F60\u5ABD_6"
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 92
+        width: 509
+        height: 990
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d31a1fc6dc76b820800000000000000
+      internalID: 2933669469317895123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u649E\u5230\u4F60\u5ABD_7"
       rect:
         serializedVersion: 2
         x: 2612
         y: 128
         width: 589
         height: 961
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fd3680ddd7edf150800000000000000
-      internalID: 5908133226052206070
+      spriteID: 32c3b49ca2337b900800000000000000
+      internalID: 700084525938195491
       vertices: []
       indices: 
       edges: []

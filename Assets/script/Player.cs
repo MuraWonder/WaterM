@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public Sprite hEmotionSprite; //撞到障礙表情
 
 
-    //public Animator anim;
+    public Animator anim; //宣告動畫器的名稱叫做anim
 
     public float maxHealth;
     public static float s_maxHealth;
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     public bool canMove = true;    // 學長加的，玩家是否可移動
     public GameObject tokei;
-    private Rigidbody2D RB;//防止翻轉
+    //private Rigidbody2D RB;//防止翻轉
     public AudioSource collectSound;//播放蒐集的聲音
     public AudioSource hitSound;
     public GameOverScreen GameOverScreen;//呼喚gameover的畫面
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   //player.GetComponent<Talkmove>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>(); //抓play底下動畫器
         GameOverScreen.GetComponent<GameOverScreen>().isblack = false;
         originScale = transform.localScale;
         //RB = GetComponent<RigidBody2D>();
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (canMove)
-        {   if(Input.GetKeyDown(KeyCode.W))
+        {   if(Input.GetKeyDown(KeyCode.W)) //GetKeyDown
             {
                 // Vector3 vector3 = new Vector3(gameObject.transform.position.x,jumpHigh- speed * Time.deltaTime,0);
                 // gameObject.transform.position = vector3;
@@ -90,11 +90,11 @@ public class Player : MonoBehaviour
             // { move = false; }
             if (move == true) //有在動就播動畫
             {
-                //anim.Play("Run");
+                anim.Play("fly");
             }
             else
             {
-                //anim.Play("Breath");
+                anim.Play("mainRuningame");
             }
         }
         else
@@ -105,7 +105,8 @@ public class Player : MonoBehaviour
         }
         if(tokei.GetComponent<Timer>().currenttime==0)
         {BGMusic.Stop();
-         GameOverScreen.DvideoFirst();}
+         GameOverScreen.DvideoFirst();
+         enabled=false;}
     }
     
 
@@ -132,17 +133,20 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
         }
          if(other.gameObject.tag=="Obstacle")
-        {
+        {   
+            StartCoroutine(SetAnimHit(1));
             tokei.GetComponent<Timer>().currenttime -= 3.0f;
             hitSound.Play();
             Destroy(other.gameObject);
-            StartCoroutine(SetEmotion(2));
+            StartCoroutine(SetEmotion(2)); //表情兩秒
+
         }
         if(other.gameObject.tag=="DeathZone")
         {   BGMusic.Stop();
             GameOverScreen.DvideoFirst();
 
         }
+       
     }
     IEnumerator SetEmotion (float time)
     {
@@ -151,5 +155,14 @@ public class Player : MonoBehaviour
     Emotion.sprite = dEmotionSprite;  //喚回預設表情 
 
     }
+    IEnumerator SetAnimHit (float time)
+    {   anim.Play("HIT");
+        yield return new WaitForSeconds (time);
+        anim.Play("mainRuningame"); }
+
+        IEnumerator SetAnimFly (float time)
+    {   anim.Play("fly");
+        yield return new WaitForSeconds (time);
+        anim.Play("mainRuningame"); }
    
 }
