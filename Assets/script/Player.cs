@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 public class Player : MonoBehaviour
 {   //public GameObject player; //為了強制移動而加
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
         originScale = transform.localScale;
         //RB = GetComponent<RigidBody2D>();
         //RB.freezeRotation = true;
+        anim.Play("mainRuningame");
 
        if(s_maxHealth==0){
            health = maxHealth;
@@ -68,9 +70,9 @@ public class Player : MonoBehaviour
                 // Vector3 vector3 = new Vector3(gameObject.transform.position.x,jumpHigh- speed * Time.deltaTime,0);
                 // gameObject.transform.position = vector3;
                 gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpHigh;
-                move = true;
+                //move = true;
                 transform.localScale = Vector3.Scale(originScale, new Vector3(1, 1, 1));
-                
+                StartCoroutine(SetAnimFly(1));
             }
             // if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             // {
@@ -90,11 +92,11 @@ public class Player : MonoBehaviour
             // { move = false; }
             if (move == true) //有在動就播動畫
             {
-                anim.Play("fly");
+                //anim.Play("fly");
             }
             else
             {
-                anim.Play("mainRuningame");
+                //anim.Play("mainRuningame");
             }
         }
         else
@@ -132,6 +134,15 @@ public class Player : MonoBehaviour
             ScoreSystem.theCollect += 1;
             Destroy(other.gameObject);
         }
+         if(other.gameObject.tag=="PlusPlus")
+        {
+            tokei.GetComponent<Timer>().currenttime += 5.0f;
+            collectSound.volume = 0.2f;
+            collectSound.Play();
+            ScoreSystem.theScore += 500;
+            ScoreSystem.theCollect += 1;
+            Destroy(other.gameObject);
+        }
          if(other.gameObject.tag=="Obstacle")
         {   
             StartCoroutine(SetAnimHit(1));
@@ -139,6 +150,7 @@ public class Player : MonoBehaviour
             hitSound.Play();
             Destroy(other.gameObject);
             StartCoroutine(SetEmotion(2)); //表情兩秒
+            CameraShaker.Instance.ShakeOnce(4f,4f,1f,1f);
 
         }
         if(other.gameObject.tag=="DeathZone")
