@@ -12,11 +12,13 @@ public class Player : MonoBehaviour
     bool move;
     [Header("表情UI")]
     public Image Emotion; //鰾情
-    public Sprite dEmotionSprite; //正常鰾情
-    public Sprite hEmotionSprite; //撞到障礙表情
+    public Sprite dEmotionSprite; //正常鰾情 defult
+    public Sprite hEmotionSprite; //撞到障礙表情 hit
 
 
     public Animator anim; //宣告動畫器的名稱叫做anim
+    public Animator popAnim; 
+    public GameObject Text01;
 
     public float maxHealth;
     public static float s_maxHealth;
@@ -42,6 +44,7 @@ public class Player : MonoBehaviour
     void Start()
     {   //player.GetComponent<Talkmove>();
         anim = GetComponent<Animator>(); //抓play底下動畫器
+        popAnim = GetComponent<Animator>(); 
         GameOverScreen.GetComponent<GameOverScreen>().isblack = false;
         originScale = transform.localScale;
         //RB = GetComponent<RigidBody2D>();
@@ -128,7 +131,7 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag=="Plustime")
         {
             tokei.GetComponent<Timer>().currenttime += 1.0f;
-            collectSound.volume = 0.2f;
+            collectSound.volume = 0.1f;
             collectSound.Play();
             ScoreSystem.theScore += 100;
             ScoreSystem.theCollect += 1;
@@ -137,11 +140,13 @@ public class Player : MonoBehaviour
          if(other.gameObject.tag=="PlusPlus")
         {
             tokei.GetComponent<Timer>().currenttime += 5.0f;
-            collectSound.volume = 0.2f;
+            collectSound.volume = 0.1f;
             collectSound.Play();
             ScoreSystem.theScore += 500;
             ScoreSystem.theCollect += 1;
+            popAnim.Play("pop1");
             Destroy(other.gameObject);
+           
         }
          if(other.gameObject.tag=="Obstacle")
         {   
