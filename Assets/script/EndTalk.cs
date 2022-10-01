@@ -33,6 +33,16 @@ public class EndTalk : MonoBehaviour
             Invoke("ChangeScene",0.8f);
         });
     }
+    
+    public void RetryButton()
+  {   
+      ScoreSystem.theScore = 0;
+      ScoreSystem.theCollect = 0;
+      Time.timeScale = 1f;
+      UnityEngine.SceneManagement.SceneManager.LoadScene("01");
+      
+  }
+
     void ChangeScene()
     {
         SceneManager.LoadScene("Talk01");

@@ -30,12 +30,12 @@ public class SceneHandler : MonoBehaviour
         Fader.gameObject.SetActive(true);
         LeanTween.scale(Fader,Vector3.zero,0f);
         LeanTween.scale(Fader,new Vector3(1,1,1),0.5f).setEase(LeanTweenType.easeInOutExpo).setOnComplete(() => {
-            Invoke("ChangeScene",0.8f);
+            Invoke("ChangeScene",0.5f);
             
         });
     }
     void ChangeScene()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("01");
     }
 }

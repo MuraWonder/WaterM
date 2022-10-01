@@ -3072,7 +3072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.99994, y: -177.44196}
+  m_AnchoredPosition: {x: 46.99994, y: -659}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &451441984
@@ -6945,7 +6945,7 @@ MonoBehaviour:
   jumpHigh: 20
   Emotion: {fileID: 1188796737}
   dEmotionSprite: {fileID: 21300000, guid: 31ef9f6010c134840b4811a522dea5db, type: 3}
-  hEmotionSprite: {fileID: 21300000, guid: d2ab284935ae9c5458d7efdcff486256, type: 3}
+  hEmotionSprite: {fileID: 21300000, guid: b42689f8c9d19e94a8c43fefa67a694c, type: 3}
   anim: {fileID: 0}
   popAnim: {fileID: 451441984}
   Text01: {fileID: 0}

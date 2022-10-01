@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
     void Start()
     {   //player.GetComponent<Talkmove>();
         anim = GetComponent<Animator>(); //抓play底下動畫器
-        popAnim = GetComponent<Animator>(); 
+        //popAnim = GetComponent<Animator>(); 
         GameOverScreen.GetComponent<GameOverScreen>().isblack = false;
         originScale = transform.localScale;
         //RB = GetComponent<RigidBody2D>();

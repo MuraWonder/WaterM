@@ -20,6 +20,10 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Video01");
     }
+    public void gallery()
+    {
+        SceneManager.LoadScene("Gallery");
+    }
     public void Exit()
     {
         YesNo.SetActive(true);
