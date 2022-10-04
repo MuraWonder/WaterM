@@ -20,5 +20,9 @@ public class NextScene : MonoBehaviour
             {
                 SceneManager.LoadScene("End");
             }
+        if (Input.GetKey(KeyCode.K))
+            {
+                SceneManager.LoadScene("End2");
+            }
     }
 }

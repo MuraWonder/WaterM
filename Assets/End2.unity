@@ -470,9 +470,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1168914879}
-        m_TargetAssemblyTypeName: EndTalk, Assembly-CSharp
-        m_MethodName: OpenTalk01Scene
+      - m_Target: {fileID: 1168914881}
+        m_TargetAssemblyTypeName: EndTalk2, Assembly-CSharp
+        m_MethodName: OpenTalk02Scene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -630,9 +630,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204, y: -310}
-  m_SizeDelta: {x: 183.0507, y: 183.0457}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 265, y: -311.8}
+  m_SizeDelta: {x: 145.9404, y: 145.9364}
+  m_Pivot: {x: 0.6069262, y: 0.44653562}
 --- !u!114 &385323894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ae802c1150dd239458df99f1a723c26b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07fbd6e33bea81c4db2854d75d10c55d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -832,7 +832,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 548120503}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1168914881}
+        m_TargetAssemblyTypeName: EndTalk2, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &548120503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,13 +1089,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: f6e2408dec288944fb1b05a0d1aee954, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1168914881}
+        m_TargetAssemblyTypeName: EndTalk2, Assembly-CSharp
+        m_MethodName: RetryButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1398,7 +1410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0ae1a593cb118ed4aa51d9c932d39aeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea4780bb366b304ab5c9cd61e064c72, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1505,6 +1517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1168914880}
   - component: {fileID: 1168914879}
+  - component: {fileID: 1168914881}
   m_Layer: 0
   m_Name: EndTalk
   m_TagString: Untagged
@@ -1539,6 +1552,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168914881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168914878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea8dff40b8baaf45b0a26edc6a03f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fader: {fileID: 216505855}
 --- !u!1 &1626752678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,7 +1678,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 211, y: 1}
+  m_AnchoredPosition: {x: 176.84521, y: -0.0024414062}
   m_SizeDelta: {x: 607.7915, y: 113.9609}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760087995

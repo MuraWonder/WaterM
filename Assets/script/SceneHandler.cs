@@ -34,7 +34,7 @@ public class SceneHandler : MonoBehaviour
             
         });
     }
-    void ChangeScene()
+    void ChangeScene()  //目標
     {
         SceneManager.LoadScene("01");
     }

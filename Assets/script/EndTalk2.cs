@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndTalk : MonoBehaviour
+public class EndTalk2 : MonoBehaviour
 {
     [SerializeField] RectTransform Fader;
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class EndTalk : MonoBehaviour
         });
     }
 
-    public void OpenTalk01Scene()
+    public void OpenTalk02Scene()
     {
         Fader.gameObject.SetActive(true);
         LeanTween.scale(Fader,Vector3.zero,0f);
@@ -39,16 +39,16 @@ public class EndTalk : MonoBehaviour
       ScoreSystem.theScore = 0;
       ScoreSystem.theCollect = 0;
       Time.timeScale = 1f;
-      UnityEngine.SceneManagement.SceneManager.LoadScene("01");
+      UnityEngine.SceneManagement.SceneManager.LoadScene("02");
       
   }
 
     void ChangeScene()
     {
-        SceneManager.LoadScene("Talk01");
+        SceneManager.LoadScene("Talk02");
     }
 
-        public void Menu()
+    public void Menu()
     {
         SceneManager.LoadScene("Menu");
     }

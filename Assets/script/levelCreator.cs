@@ -60,7 +60,7 @@ public class levelCreator : MonoBehaviour
         collectedTiles.transform.position = new Vector2(-80.0f, -50.0f);
         tilePos = GameObject.Find("startTilePosition"); //第一個
         startUpPosY = tilePos.transform.position.y;
-        outofbounceX = tilePos.transform.position.x - 60.0f;//2 離開場景30.of
+        outofbounceX = tilePos.transform.position.x - 30.0f;//2 離開場景30.of
 
         // fillScene();
 

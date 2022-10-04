@@ -1,43 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCanMove : MonoBehaviour
 {   //public GameObject player; //為了強制移動而加
     public float speed;
-    public float jumpHigh; //外加跳躍
+
     Vector3 originScale;
     bool move;
     public Animator anim;
 
-    public float maxHealth;
-    public static float s_maxHealth;
-    public static float health;
-
-    public int life; 
-
-
-    public float maxHealth2; //最大血
-    public static float s_maxHealth2; //扣血
-    public static float health2;  //當前血
     [SerializeField]
     public bool canMove = false;    // 學長加的，玩家是否可移動
 
     // Start is called before the first frame update
     void Start()
-    {   //player.GetComponent<Talkmove>();
+    {   
         anim = GetComponent<Animator>();
         originScale = transform.localScale;
-
-       if(s_maxHealth==0){
-           health = maxHealth;
-           s_maxHealth = maxHealth;
-       }
-       if(s_maxHealth2==0){
-           health2 = maxHealth2;
-           s_maxHealth2 = maxHealth2;
-       }
-
     }
 
     // Update is called once per frame
@@ -45,14 +26,7 @@ public class PlayerCanMove : MonoBehaviour
     {
         if (canMove)
          {   
-        //if(Input.GetKeyDown(KeyCode.W))
-        //     {
-        //         Vector3 vector3 = new Vector3(gameObject.transform.position.x,jumpHigh- speed * Time.deltaTime,0);
-        //         gameObject.transform.position = vector3;
-        //         gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpHigh;
-        //         move = true;
-        //         transform.localScale = Vector3.Scale(originScale, new Vector3(1, 1, 1));
-        //     }
+       
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             {
                 Vector3 vector3 = new Vector3(gameObject.transform.position.x - speed * Time.deltaTime, gameObject.transform.position.y, 0);
@@ -78,12 +52,7 @@ public class PlayerCanMove : MonoBehaviour
                 anim.Play("Breath");
             }
         }
-        else
-        {  
-            //   if(player.GetComponent<Talkmove>().force == true)
-            //  {anim.Play("Run");}
-            // anim.Play("Breath");
-        }
+      
     }
     
 
@@ -98,14 +67,9 @@ public class PlayerCanMove : MonoBehaviour
         move = b;
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag=="Obstacle"){
-            health -= 2.0f;
-        }
-        if(other.gameObject.tag=="Wronganswer"){
-            health2-= 2.0f;
-        }
-        
+      public void toSlevel()
+    {
+        SceneManager.LoadScene("SLevel");
     }
    
 }

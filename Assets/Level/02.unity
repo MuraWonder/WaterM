@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.27058825, b: 0.9529412, a: 1}
     m_PressedColor: {r: 0.49, g: 0.49, b: 0.49, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -707,8 +707,6 @@ GameObject:
   - component: {fileID: 124541451}
   - component: {fileID: 124541450}
   - component: {fileID: 124541449}
-  - component: {fileID: 124541448}
-  - component: {fileID: 124541453}
   - component: {fileID: 124541454}
   - component: {fileID: 124541455}
   m_Layer: 5
@@ -718,21 +716,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &124541448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124541447}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed01c7f124dc774990b0d2e67800e14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MAX_HEALTH: 10
-  health: 0
-  bar: {fileID: 0}
 --- !u!114 &124541449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,21 +808,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &124541453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124541447}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6e08d182b374741b5f105c745bcc7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EMT_HEALTH: 0
-  health2: 0
-  bar: {fileID: 0}
 --- !u!114 &124541454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,6 +839,7 @@ MonoBehaviour:
   YesNoIngame: {fileID: 1913669378}
   VideoPanel: {fileID: 1213028243}
   DvPlayer: {fileID: 838416681}
+  level: 2
 --- !u!1001 &128756240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1930,7 +1899,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.27058825, b: 0.9529412, a: 1}
     m_PressedColor: {r: 0.49, g: 0.49, b: 0.49, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2508,7 +2477,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 512116842}
-  - component: {fileID: 512116841}
   - component: {fileID: 512116843}
   m_Layer: 0
   m_Name: ThisSceneManager
@@ -2517,19 +2485,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &512116841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512116840}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e234761dd837b784084a56e261a6a340, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraSpeed: 7
 --- !u!4 &512116842
 Transform:
   m_ObjectHideFlags: 0
@@ -3875,7 +3830,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.27058825, b: 0.9529412, a: 1}
     m_PressedColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -5197,6 +5152,7 @@ MonoBehaviour:
   playerTransform: {fileID: 2076560271}
   progressSlider: {fileID: 919300613}
   endTime: 50
+  level: 2
 --- !u!4 &1112370787
 Transform:
   m_ObjectHideFlags: 0

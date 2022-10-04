@@ -11,6 +11,7 @@ public class gameHandler : MonoBehaviour
     public Slider progressSlider; // 進度
     public float endTime = 20f; //結束時間 外面可調設定
     float hasRunTime=0f; //目前跑了多久
+    public int level;
     
     
     
@@ -23,7 +24,12 @@ public class gameHandler : MonoBehaviour
         progressSlider.value=hasRunTime/endTime;
         if(hasRunTime>=endTime){
             // 結算
+            if(level ==1 ){
             UnityEngine.SceneManagement.SceneManager.LoadScene("End");
+            }
+            if(level ==2 ){
+            UnityEngine.SceneManagement.SceneManager.LoadScene("End2");
+            }
         }
         
         hasRunTime+=Time.deltaTime;

@@ -16,6 +16,8 @@ public class GameOverScreen : MonoBehaviour
    [SerializeField]
    public GameObject VideoPanel;
    public VideoPlayer DvPlayer;
+   [SerializeField]
+   public int level;
     // Start is called before the first frame update
   void Start(){
       
@@ -63,7 +65,12 @@ public class GameOverScreen : MonoBehaviour
       ScoreSystem.theScore = 0;
       ScoreSystem.theCollect = 0;
       Resume();
+      if(level == 1){
       UnityEngine.SceneManagement.SceneManager.LoadScene("01");
+      }
+       if(level == 2){
+      UnityEngine.SceneManagement.SceneManager.LoadScene("02");
+      }
       //gameObject.SetActive(false);
       
       
