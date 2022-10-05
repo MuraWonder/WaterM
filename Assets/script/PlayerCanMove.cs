@@ -71,5 +71,12 @@ public class PlayerCanMove : MonoBehaviour
     {
         SceneManager.LoadScene("SLevel");
     }
-   
+        public void to02()
+    {
+        SceneManager.LoadScene("02");
+    }
+        public void toMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

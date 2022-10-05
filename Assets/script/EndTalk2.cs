@@ -45,7 +45,7 @@ public class EndTalk2 : MonoBehaviour
 
     void ChangeScene()
     {
-        SceneManager.LoadScene("Talk02");
+        SceneManager.LoadScene("Talk02E");
     }
 
     public void Menu()

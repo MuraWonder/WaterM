@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Talk02.unity
     guid: f589c1e144b16f740b4df537eb9b9a4b
+  - enabled: 1
+    path: Assets/Talk02E.unity
+    guid: 01bbe5713a04ff746be15cce51e8db76
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
