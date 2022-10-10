@@ -7331,8 +7331,8 @@ MonoBehaviour:
   speed: 10
   jumpHigh: 20
   Emotion: {fileID: 1188796737}
-  dEmotionSprite: {fileID: 21300000, guid: 31ef9f6010c134840b4811a522dea5db, type: 3}
-  hEmotionSprite: {fileID: 21300000, guid: b42689f8c9d19e94a8c43fefa67a694c, type: 3}
+  dEmotionSprite: {fileID: 21300000, guid: 98f7d002f11626f44ae105ce843f8edd, type: 3}
+  hEmotionSprite: {fileID: 21300000, guid: f1ace9be6c155e943a2c12c99fc8598a, type: 3}
   anim: {fileID: 0}
   popAnim: {fileID: 451441984}
   Text01: {fileID: 0}
@@ -8292,7 +8292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 31ef9f6010c134840b4811a522dea5db, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98f7d002f11626f44ae105ce843f8edd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
