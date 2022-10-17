@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 5710310088940743568}
   m_Layer: 0
   m_Name: OP2-SMELL
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 206042345207229400}
   m_Layer: 0
   m_Name: OP2-LONG
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

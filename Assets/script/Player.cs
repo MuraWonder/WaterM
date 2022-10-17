@@ -6,6 +6,11 @@ using EZCameraShake;
 
 public class Player : MonoBehaviour
 {   //public GameObject player; //為了強制移動而加
+    public GameObject groundRayObject;
+    bool jumpOn;
+    public int maxJump;
+    public int nowJump;
+    
     public float speed;
     public float jumpHigh; //外加跳躍
     Vector3 originScale;
@@ -33,7 +38,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     public bool canMove = true;    // 學長加的，玩家是否可移動
     public GameObject tokei;
-    //private Rigidbody2D RB;//防止翻轉
+    private Rigidbody2D RB;//防止翻轉
     public AudioSource collectSound;//播放蒐集的聲音
     public AudioSource hitSound;
     public GameOverScreen GameOverScreen;//呼喚gameover的畫面
@@ -47,7 +52,8 @@ public class Player : MonoBehaviour
         //popAnim = GetComponent<Animator>(); 
         GameOverScreen.GetComponent<GameOverScreen>().isblack = false;
         originScale = transform.localScale;
-        //RB = GetComponent<RigidBody2D>();
+        jumpOn = false;
+        RB = GetComponent<Rigidbody2D>();
         //RB.freezeRotation = true;
         anim.Play("mainRuningame");
 
@@ -59,23 +65,33 @@ public class Player : MonoBehaviour
            health2 = maxHealth2;
            s_maxHealth2 = maxHealth2;
        }
-       
+       maxJump = 2;
+       nowJump = 0;
        
      
     }
 
     // Update is called once per frame
     void Update()
-    {
+     {   //RaycastHit2D hitGround = Physics2D.Raycast (groundRayObject.transform.position,-Vector2.up);
+          // Debug.DrawRay(groundRayObject.transform.position,-Vector2.up*hitGround.distance,Color.red);
         if (canMove)
-        {   if(Input.GetKeyDown(KeyCode.W)) //GetKeyDown
-            {
+        {   if(nowJump!=maxJump){
+            if(Input.GetKeyDown(KeyCode.W)) //GetKeyDown
+            {   nowJump += 1;
+                Debug.Log("+1");
                 // Vector3 vector3 = new Vector3(gameObject.transform.position.x,jumpHigh- speed * Time.deltaTime,0);
                 // gameObject.transform.position = vector3;
                 gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpHigh;
                 //move = true;
                 transform.localScale = Vector3.Scale(originScale, new Vector3(1, 1, 1));
                 StartCoroutine(SetAnimFly(1));
+                
+            }
+            }
+            if(Input.GetKey(KeyCode.S))
+            {
+                gameObject.GetComponent<Rigidbody2D>().velocity -= Vector2.up*jumpHigh*.1f;
             }
             // if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             // {
@@ -93,6 +109,7 @@ public class Player : MonoBehaviour
             // }
             // if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.D))
             // { move = false; }
+            
             if (move == true) //有在動就播動畫
             {
                 //anim.Play("fly");
@@ -130,7 +147,7 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.tag=="Plustime")
         {
-            tokei.GetComponent<Timer>().currenttime += 1.0f;
+            tokei.GetComponent<Timer>().currenttime += 0.4f;
             collectSound.volume = 0.1f;
             collectSound.Play();
             ScoreSystem.theScore += 100;
@@ -163,7 +180,16 @@ public class Player : MonoBehaviour
             GameOverScreen.DvideoFirst();
 
         }
+        
        
+       
+    }
+    private void OnCollisionEnter2D(Collision2D GGo)
+    {     
+            if(GGo.gameObject.tag=="Ground")
+            {   nowJump=0;
+                Debug.Log("屌");
+            }
     }
     IEnumerator SetEmotion (float time)
     {

@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 8409484933508627682}
   m_Layer: 0
   m_Name: OP2-FLOOR2O 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 456368967623366558}
   m_Layer: 0
   m_Name: OP2-LONG
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

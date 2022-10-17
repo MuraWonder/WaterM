@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8422245438323140637}
   m_Layer: 0
   m_Name: "\u9032\u64CA"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 291029247014366909}
   m_Layer: 0
   m_Name: PreM
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

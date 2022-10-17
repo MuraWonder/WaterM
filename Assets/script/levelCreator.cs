@@ -110,7 +110,7 @@ public class levelCreator : MonoBehaviour
         if (gameLayer.transform.childCount < 10)
         {
             spawmTile();
-            print("spwan");
+            //print("spwan");
         }
 
     }

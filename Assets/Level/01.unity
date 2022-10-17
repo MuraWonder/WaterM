@@ -7189,8 +7189,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061662750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 182.8, y: 7.7, z: -0.0000039587876}
-  m_LocalScale: {x: 0.14548302, y: 0.1501897, z: 0.008235542}
+  m_LocalPosition: {x: 184.16, y: 7.71, z: -0.0000039587876}
+  m_LocalScale: {x: 0.82083553, y: 0.84739125, z: 0.04646608}
   m_Children: []
   m_Father: {fileID: 1879250778}
   m_RootOrder: 15
@@ -7328,6 +7328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c199f679acda76146975132b69e4505c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundRayObject: {fileID: 0}
+  maxJump: 0
+  nowJump: 0
   speed: 10
   jumpHigh: 20
   Emotion: {fileID: 1188796737}
@@ -9035,7 +9038,7 @@ GameObject:
   - component: {fileID: 1278076011}
   m_Layer: 0
   m_Name: 0 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9648,8 +9651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 316.6985, y: 120.7705}
+  m_AnchoredPosition: {x: -0.000026703, y: 0}
+  m_SizeDelta: {x: 480.8884, y: 183.383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1465120068
 MonoBehaviour:
@@ -9672,12 +9675,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 162
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 152
+    m_MaxSize: 162
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -12854,8 +12857,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033686595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 189.01402, y: 7.4529996, z: -0.0000039587876}
-  m_LocalScale: {x: 0.14548302, y: 0.1501897, z: 0.008235542}
+  m_LocalPosition: {x: 188.01, y: 7.61, z: -0.0000039587876}
+  m_LocalScale: {x: 0.75432533, y: 0.7787293, z: 0.04270105}
   m_Children: []
   m_Father: {fileID: 1879250778}
   m_RootOrder: 16
@@ -13532,7 +13535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 5359146720706658118}
-  Starttime: 25
+  Starttime: 31
   currenttime: 0
 --- !u!114 &5359146719537979671
 MonoBehaviour:
