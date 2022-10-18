@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fader: {fileID: 1617757787}
+  VideoPanelStart: {fileID: 1330480426}
+  DvPlayerStart: {fileID: 1626780020}
 --- !u!1 &196265415
 GameObject:
   m_ObjectHideFlags: 0

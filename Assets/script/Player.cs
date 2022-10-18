@@ -6,8 +6,9 @@ using EZCameraShake;
 
 public class Player : MonoBehaviour
 {   //public GameObject player; //為了強制移動而加
-    public GameObject groundRayObject;
-    bool jumpOn;
+    public GameObject UItip1;
+    public GameObject UItip2;
+    public GameObject UItip3;
     public int maxJump;
     public int nowJump;
     
@@ -52,7 +53,7 @@ public class Player : MonoBehaviour
         //popAnim = GetComponent<Animator>(); 
         GameOverScreen.GetComponent<GameOverScreen>().isblack = false;
         originScale = transform.localScale;
-        jumpOn = false;
+        
         RB = GetComponent<Rigidbody2D>();
         //RB.freezeRotation = true;
         anim.Play("mainRuningame");
@@ -68,7 +69,7 @@ public class Player : MonoBehaviour
        maxJump = 2;
        nowJump = 0;
        
-     
+       StartCoroutine(SetUIHide(8));
     }
 
     // Update is called once per frame
@@ -208,4 +209,11 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds (time);
         anim.Play("mainRuningame"); }
    
+    IEnumerator SetUIHide (float time)
+    {   
+        yield return new WaitForSeconds (time);
+        UItip1.SetActive(false);
+        UItip2.SetActive(false);
+        UItip3.SetActive(false);
+    }
 }
