@@ -131,7 +131,12 @@ public class Player : MonoBehaviour
         {BGMusic.Stop();
          GameOverScreen.DvideoFirst();
          enabled=false;}
-
+        if(tokei.GetComponent<Timer>().currenttime<10)
+        {
+         Shake.ShakeIt();
+        }
+        if(tokei.GetComponent<Timer>().currenttime>10)
+        {Shake.GetComponent<Shake>().Targetshaking = false;}
     }
     
 

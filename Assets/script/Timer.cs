@@ -38,6 +38,7 @@ public class Timer : MonoBehaviour
         if(currenttime<10)
         {
             text.GetComponent<Text>().color = Color.red;
+           
         }
         if(currenttime>+10)
         {

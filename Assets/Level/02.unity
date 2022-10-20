@@ -5218,7 +5218,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c199f679acda76146975132b69e4505c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundRayObject: {fileID: 1912504385}
+  Shake: {fileID: 1188796738}
+  UItip1: {fileID: 0}
+  UItip2: {fileID: 0}
+  UItip3: {fileID: 0}
   maxJump: 0
   nowJump: 0
   speed: 10
@@ -6628,6 +6631,7 @@ GameObject:
   - component: {fileID: 1188796735}
   - component: {fileID: 1188796736}
   - component: {fileID: 1188796737}
+  - component: {fileID: 1188796738}
   m_Layer: 5
   m_Name: Face
   m_TagString: Untagged
@@ -6692,6 +6696,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1188796738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188796734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b534fe0d1a3faad4cbb61e03c7ae9bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShakeAmount: 50
+  ShakeAmount2: 10
+  tokei: {fileID: 5359146719537979668}
+  Target: {fileID: 5359146720706658116}
 --- !u!1 &1190230460
 GameObject:
   m_ObjectHideFlags: 0
@@ -7438,6 +7458,7 @@ GameObject:
   - component: {fileID: 1374149094}
   - component: {fileID: 1374149096}
   - component: {fileID: 1374149098}
+  - component: {fileID: 1374149093}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7445,6 +7466,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1374149093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374149092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b534fe0d1a3faad4cbb61e03c7ae9bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShakeAmount: 10
+  ShakeAmount2: 0
+  tokei: {fileID: 5359146719537979668}
+  Target: {fileID: 0}
 --- !u!20 &1374149094
 Camera:
   m_ObjectHideFlags: 0
@@ -9154,6 +9191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fader: {fileID: 1383889306}
+  VideoPanelStart: {fileID: 0}
+  DvPlayerStart: {fileID: 0}
 --- !u!4 &1657522768
 Transform:
   m_ObjectHideFlags: 0
