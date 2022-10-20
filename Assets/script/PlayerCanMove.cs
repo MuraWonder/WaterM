@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCanMove : MonoBehaviour
 {   //public GameObject player; //為了強制移動而加
+    public GameObject UItip1; //隱藏UI
+    public GameObject UItip2; //隱藏UI
     public float speed;
 
     Vector3 originScale;
@@ -19,6 +21,7 @@ public class PlayerCanMove : MonoBehaviour
     {   
         anim = GetComponent<Animator>();
         originScale = transform.localScale;
+        StartCoroutine(SetUIHide2(4));
     }
 
     // Update is called once per frame
@@ -78,5 +81,12 @@ public class PlayerCanMove : MonoBehaviour
         public void toMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+     IEnumerator SetUIHide2 (float time)
+    {   
+        yield return new WaitForSeconds (time);
+        UItip1.SetActive(false);
+        UItip2.SetActive(false);
+        
     }
 }

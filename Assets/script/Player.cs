@@ -6,6 +6,7 @@ using EZCameraShake;
 
 public class Player : MonoBehaviour
 {   //public GameObject player; //為了強制移動而加
+    public Shake Shake;
     public GameObject UItip1;
     public GameObject UItip2;
     public GameObject UItip3;
@@ -130,6 +131,7 @@ public class Player : MonoBehaviour
         {BGMusic.Stop();
          GameOverScreen.DvideoFirst();
          enabled=false;}
+
     }
     
 
@@ -174,6 +176,8 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(SetEmotion(2)); //表情兩秒
             CameraShaker.Instance.ShakeOnce(4f,4f,1f,1f);
+            Shake.ShakeMe();
+            
 
         }
         if(other.gameObject.tag=="DeathZone")
@@ -216,4 +220,5 @@ public class Player : MonoBehaviour
         UItip2.SetActive(false);
         UItip3.SetActive(false);
     }
+   
 }
