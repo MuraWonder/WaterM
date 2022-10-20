@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Resume();
     }
 
     // Update is called once per frame
@@ -52,6 +52,10 @@ public class Menu : MonoBehaviour
        public void backtoMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+    public void Resume()
+    {
+      Time.timeScale = 1f;
     }
 
 }

@@ -3216,7 +3216,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368512102}
   m_CullTransparentMesh: 1
---- !u!43 &368521722
+--- !u!43 &421259423
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3768,6 +3768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 786353010}
   - component: {fileID: 786353009}
+  - component: {fileID: 786353011}
   m_Layer: 0
   m_Name: EndTalk
   m_TagString: Untagged
@@ -3782,7 +3783,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786353008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6e2408dec288944fb1b05a0d1aee954, type: 3}
   m_Name: 
@@ -3802,6 +3803,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &786353011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786353008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea8dff40b8baaf45b0a26edc6a03f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fader: {fileID: 89057689}
 --- !u!1 &861710520
 GameObject:
   m_ObjectHideFlags: 0
@@ -4679,7 +4693,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5320,8 +5334,8 @@ MonoBehaviour:
   - {x: -0.9276161, y: 3.9225314, z: 0}
   - {x: -0.4472772, y: 1.9642242, z: 0}
   m_ShapePathHash: -1759851138
-  m_Mesh: {fileID: 368521722}
-  m_InstanceId: 25782
+  m_Mesh: {fileID: 421259423}
+  m_InstanceId: 55562
 --- !u!1 &1462775831
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,8 +8,7 @@ public class EndTalk : MonoBehaviour
     [SerializeField] RectTransform Fader;
     // Start is called before the first frame update
     private void Start()
-    {
-        Fader.gameObject.SetActive(true);
+    {   Fader.gameObject.SetActive(true);
         LeanTween.scale(Fader,new Vector3(1,1,1),0);
         LeanTween.scale(Fader,Vector3.zero,1.5f).setEase(LeanTweenType.easeOutExpo).setOnComplete(() => {
             Fader.gameObject.SetActive(false);

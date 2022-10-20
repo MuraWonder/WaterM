@@ -181,7 +181,7 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(SetEmotion(2)); //表情兩秒
             CameraShaker.Instance.ShakeOnce(4f,4f,1f,1f);
-            Shake.ShakeMe();
+            Shake?.ShakeMe();
             
 
         }
@@ -221,9 +221,9 @@ public class Player : MonoBehaviour
     IEnumerator SetUIHide (float time)
     {   
         yield return new WaitForSeconds (time);
-        UItip1.SetActive(false);
-        UItip2.SetActive(false);
-        UItip3.SetActive(false);
+        UItip1?.SetActive(false);
+        UItip2?.SetActive(false);
+        UItip3?.SetActive(false);
     }
    
 }

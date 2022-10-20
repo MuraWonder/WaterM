@@ -17,7 +17,7 @@ public class GameOverScreen : MonoBehaviour
    public GameObject VideoPanel;
    public VideoPlayer DvPlayer;
    [SerializeField]
-   public int level;
+   public int level; //選關卡
     // Start is called before the first frame update
   void Start(){
       
@@ -68,7 +68,7 @@ public class GameOverScreen : MonoBehaviour
       if(level == 1){
       UnityEngine.SceneManagement.SceneManager.LoadScene("01");
       }
-       if(level == 2){
+      if(level == 2){
       UnityEngine.SceneManagement.SceneManager.LoadScene("02");
       }
       //gameObject.SetActive(false);

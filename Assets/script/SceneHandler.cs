@@ -15,7 +15,7 @@ public class SceneHandler : MonoBehaviour
         Fader.gameObject.SetActive(true);
         LeanTween.scale(Fader,new Vector3(1,1,1),0);
         LeanTween.scale(Fader,Vector3.zero,1.5f).setEase(LeanTweenType.easeInOutExpo).setOnComplete(() => {
-            Fader.gameObject.SetActive(false);
+        Fader.gameObject.SetActive(false);
         });
         DvPlayerStart.loopPointReached += EndReached3;
     }
