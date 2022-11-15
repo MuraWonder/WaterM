@@ -8200,7 +8200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0599184de37be2e4fbb7e5c3d4225be9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b63cb17a062ea5e4fa5ecd0a4be7132f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14538,7 +14538,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239503193598656215, guid: cffe59cc6689f194e9e7490023dcccf3, type: 3}
       propertyPath: m_Volume
-      value: 0.6
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239503193598656215, guid: cffe59cc6689f194e9e7490023dcccf3, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a96fca42e02e14c46bbd7074eae2f238, type: 3}
+    - target: {fileID: 8239503193598656215, guid: cffe59cc6689f194e9e7490023dcccf3, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239503193598656215, guid: cffe59cc6689f194e9e7490023dcccf3, type: 3}
+      propertyPath: DopplerLevel
+      value: 2.64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cffe59cc6689f194e9e7490023dcccf3, type: 3}

@@ -156,7 +156,7 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag=="Plustime")
         {
             tokei.GetComponent<Timer>().currenttime += 0.4f;
-            collectSound.volume = 0.1f;
+            collectSound.volume = 1f;
             collectSound.Play();
             ScoreSystem.theScore += 100;
             ScoreSystem.theCollect += 1;

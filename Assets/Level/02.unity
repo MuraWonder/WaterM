@@ -5700,7 +5700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0599184de37be2e4fbb7e5c3d4225be9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b63cb17a062ea5e4fa5ecd0a4be7132f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6708,6 +6708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b534fe0d1a3faad4cbb61e03c7ae9bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Targetshaking: 0
   ShakeAmount: 50
   ShakeAmount2: 10
   tokei: {fileID: 5359146719537979668}
@@ -7478,6 +7479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b534fe0d1a3faad4cbb61e03c7ae9bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Targetshaking: 0
   ShakeAmount: 10
   ShakeAmount2: 0
   tokei: {fileID: 5359146719537979668}
@@ -11278,5 +11280,9 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 8239503193598656215, guid: cffe59cc6689f194e9e7490023dcccf3, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a96fca42e02e14c46bbd7074eae2f238, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cffe59cc6689f194e9e7490023dcccf3, type: 3}
