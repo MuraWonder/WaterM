@@ -198,7 +198,7 @@ public class Player : MonoBehaviour
     {     
             if(GGo.gameObject.tag=="Ground")
             {   nowJump=0;
-                Debug.Log("屌");
+                //Debug.Log("屌");
             }
     }
     IEnumerator SetEmotion (float time)
