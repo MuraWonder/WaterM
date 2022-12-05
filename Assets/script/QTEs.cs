@@ -6,48 +6,70 @@ using UnityEngine.UI;
 public class QTEs : MonoBehaviour
 {   public GameObject DisplayBox;
     public GameObject PassBox;
-    public int QTEGen;
-    public int WaitingForKey;
-    public int CorrectKey;
+    public int QTEGen; //目前種類
+    public int WaitingForKey; //正在等數字 1為是 0為否
+    public int CorrectKey; 
     public int CountingDown;
+    public int keyamount; //需要案的*
+    public int Nowkey; //目前有的*
+    public int Nowtime; //幾次了 要不要讓人休息
+    public bool ishit;
+    [Header("影藏物件")]
+    public GameObject Hide;
+    public GameObject Hide1;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        Hide.SetActive(false);
+        Hide1.SetActive(false);
+        keyamount = 5;
         
     }
 
     // Update is called once per frame
     void Update()
     {   //生成要案的
-        if(WaitingForKey == 0){
+       
+     if(ishit==true){
+        
+        Hide.SetActive(true);
+        Hide1.SetActive(true);
+        Nowtime = 0;
+
+         if(WaitingForKey == 0){
          QTEGen = Random.Range(1,4);
          CountingDown = 1;
 
          StartCoroutine (CountDown ());
          if(QTEGen == 1){
             WaitingForKey =1;
-            DisplayBox.GetComponent<Text>().text="[8]";
+            DisplayBox.GetComponent<Text>().text="8";
          }
           if(QTEGen == 2){
             WaitingForKey =1;
-            DisplayBox.GetComponent<Text>().text="[9]";
+            DisplayBox.GetComponent<Text>().text="9";
          }
           if(QTEGen == 3){
             WaitingForKey =1;
-            DisplayBox.GetComponent<Text>().text="[0]";
+            DisplayBox.GetComponent<Text>().text="0";
          }
         }
-
+        
         if(QTEGen == 1){         //等待要按下
             if(Input.anyKeyDown){
                 if(Input.GetButtonDown("8Key")){
-                    CorrectKey = 1;
-                    Debug.Log("88888");
-                    StartCoroutine(KeyPressing());
+                    Nowkey +=1;
+                    if(Nowkey == keyamount){
+                        CorrectKey = 1;
+                        
+                        Nowkey=0;
+                        Nowtime += 1;
+                        StartCoroutine(KeyPressing());
+                    }
                 }
                 else{
-                    CorrectKey = 2;
-                    StartCoroutine(KeyPressing());
+                    //CorrectKey = 2;
+                    //StartCoroutine(KeyPressing());
                 }
             }
         }
@@ -55,11 +77,12 @@ public class QTEs : MonoBehaviour
             if(Input.anyKeyDown){
                 if(Input.GetButtonDown("9Key")){
                     CorrectKey = 1;
+                    Nowtime += 1;
                     StartCoroutine(KeyPressing());
                 }
                 else{
-                    CorrectKey = 2;
-                    StartCoroutine(KeyPressing());
+                    //CorrectKey = 2;
+                    //StartCoroutine(KeyPressing());
                 }
             }
         }
@@ -67,14 +90,20 @@ public class QTEs : MonoBehaviour
             if(Input.anyKeyDown){
                 if(Input.GetButtonDown("0Key")){
                     CorrectKey = 1;  //對的
+                    Nowtime += 1;
                     StartCoroutine(KeyPressing());
                 }
                 else{
-                    CorrectKey = 2;  //錯的
-                    StartCoroutine(KeyPressing());
+                    //CorrectKey = 2;  //錯的
+                    //StartCoroutine(KeyPressing());
                 }
             }
         }
+     }
+    if(Nowtime == 3)
+    {   Debug.Log("3次瞜");
+         ishit = false;}
+        
      
 
     }
@@ -105,7 +134,7 @@ public class QTEs : MonoBehaviour
 
     }
     IEnumerator CountDown(){
-     yield return new WaitForSeconds(1.5f);
+     yield return new WaitForSeconds(3f); //開場等待
      if(CountingDown ==1){
         QTEGen = 4;
         CountingDown =2;

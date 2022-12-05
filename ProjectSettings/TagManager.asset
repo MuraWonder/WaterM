@@ -9,6 +9,7 @@ TagManager:
   - Plustime
   - PlusPlus
   - Ground
+  - ObstacleS
   layers:
   - Default
   - TransparentFX

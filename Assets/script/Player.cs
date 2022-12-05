@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
     public AudioSource collectSound;//播放蒐集的聲音
     public AudioSource hitSound;
     public GameOverScreen GameOverScreen;//呼喚gameover的畫面
+    public QTEs QTEs;//呼喚QTE的畫面
     
     public AudioSource BGMusic; //宣告我有一格音樂
 
@@ -183,7 +184,18 @@ public class Player : MonoBehaviour
             CameraShaker.Instance.ShakeOnce(4f,4f,1f,1f);
             Shake?.ShakeMe();
             
-
+        }
+         if(other.gameObject.tag=="ObstacleS")
+        {   
+            StartCoroutine(SetAnimHit(1));
+            tokei.GetComponent<Timer>().currenttime -= 0.0f;
+            hitSound.Play();
+            Destroy(other.gameObject);
+            QTEs.GetComponent<QTEs>().ishit = true;
+            StartCoroutine(SetEmotion(2)); //表情兩秒
+            CameraShaker.Instance.ShakeOnce(4f,4f,1f,1f);
+            Shake?.ShakeMe();
+            
         }
         if(other.gameObject.tag=="DeathZone")
         {   BGMusic.Stop();

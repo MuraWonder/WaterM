@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 6247158350758761414}
   - component: {fileID: 3585137306159245084}
   m_Layer: 0
-  m_Name: "\u6A5F\u63B0\u52D5\u7269"
-  m_TagString: Obstacle
+  m_Name: PooPoo
+  m_TagString: ObstacleS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
