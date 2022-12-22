@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 1.3
+  Nowlevel: 0
 --- !u!212 &76959206
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2652,6 +2653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 10
+  Nowlevel: 0
 --- !u!212 &502087272
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3844,6 +3846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 9
+  Nowlevel: 0
 --- !u!212 &760154526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4944,6 +4947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 2
+  Nowlevel: 0
 --- !u!212 &997062512
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5301,9 +5305,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shake: {fileID: 1188796738}
-  UItip1: {fileID: 0}
-  UItip2: {fileID: 0}
-  UItip3: {fileID: 0}
   maxJump: 0
   nowJump: 0
   speed: 10
@@ -5322,6 +5323,7 @@ MonoBehaviour:
   collectSound: {fileID: 43188474}
   hitSound: {fileID: 1615904572}
   GameOverScreen: {fileID: 124541455}
+  QTEs: {fileID: 0}
   BGMusic: {fileID: 1062754805}
 --- !u!82 &1062754805
 AudioSource:
@@ -5831,6 +5833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 1.7
+  Nowlevel: 0
 --- !u!212 &1111041731
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9277,6 +9280,7 @@ MonoBehaviour:
   Fader: {fileID: 1383889306}
   VideoPanelStart: {fileID: 0}
   DvPlayerStart: {fileID: 0}
+  Nowlevel: 0
 --- !u!4 &1657522768
 Transform:
   m_ObjectHideFlags: 0
@@ -9643,6 +9647,10 @@ PrefabInstance:
     - target: {fileID: 4151876919878621332, guid: 38d1f1c9777cb1a4dad560e562bf4a10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151876920967178403, guid: 38d1f1c9777cb1a4dad560e562bf4a10, type: 3}
+      propertyPath: m_Text
+      value: "\u662F\u5426\u56DE\u904A\u6232\u9996\u9801"
       objectReference: {fileID: 0}
     - target: {fileID: 4151876921271240760, guid: 38d1f1c9777cb1a4dad560e562bf4a10, type: 3}
       propertyPath: m_Name

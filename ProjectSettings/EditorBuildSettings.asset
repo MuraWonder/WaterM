@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Video01.unity
     guid: 9e47671a1d0622c42afa919c39c30296
   - enabled: 1
+    path: Assets/Level/intro.unity
+    guid: b84012736c8dfd842bd7c81470fc4aed
+  - enabled: 1
     path: Assets/Gallery.unity
     guid: 74231391a33573947a507df1845e162c
   - enabled: 1
@@ -29,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/02.unity
     guid: 59face0159192b2489db4ecb2bdd0f54
+  - enabled: 1
+    path: Assets/Level/03.unity
+    guid: 9ccf8b97635d52f459156b507f23e571
   - enabled: 1
     path: Assets/End.unity
     guid: ded717dbcbc575547b27a2d1de39e291

@@ -71,6 +71,9 @@ public class GameOverScreen : MonoBehaviour
       if(level == 2){
       UnityEngine.SceneManagement.SceneManager.LoadScene("02");
       }
+      if(level == 3){
+      UnityEngine.SceneManagement.SceneManager.LoadScene("03");
+      }
       //gameObject.SetActive(false);
       
       
@@ -92,7 +95,8 @@ public class GameOverScreen : MonoBehaviour
 
       public void Yes()
     {
-        Application.Quit(); 
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        //Application.Quit(); 
     }
     public void No()
     {   

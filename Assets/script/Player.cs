@@ -7,9 +7,9 @@ using EZCameraShake;
 public class Player : MonoBehaviour
 {   //public GameObject player; //為了強制移動而加
     public Shake Shake;
-    public GameObject UItip1;
-    public GameObject UItip2;
-    public GameObject UItip3;
+    //public GameObject UItip1; //開場UI
+    //public GameObject UItip2;
+    //public GameObject UItip3;
     public int maxJump;
     public int nowJump;
     
@@ -47,6 +47,7 @@ public class Player : MonoBehaviour
     public QTEs QTEs;//呼喚QTE的畫面
     
     public AudioSource BGMusic; //宣告我有一格音樂
+    //public int Nowlevel;
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +72,9 @@ public class Player : MonoBehaviour
        maxJump = 2;
        nowJump = 0;
        
-       StartCoroutine(SetUIHide(8));
+    //    if (Nowlevel == 1){
+    //    StartCoroutine(SetUIHide(8));
+    //    }
     }
 
     // Update is called once per frame
@@ -230,12 +233,12 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds (time);
         anim.Play("mainRuningame"); }
    
-    IEnumerator SetUIHide (float time)
-    {   
-        yield return new WaitForSeconds (time);
-        UItip1?.SetActive(false);
-        UItip2?.SetActive(false);
-        UItip3?.SetActive(false);
-    }
+    // IEnumerator SetUIHide (float time)
+    // {   
+    //     yield return new WaitForSeconds (time);
+    //     UItip1?.SetActive(false);
+    //     UItip2?.SetActive(false);
+    //     UItip3?.SetActive(false);
+    // }
    
 }

@@ -169,6 +169,7 @@ MonoBehaviour:
   Fader: {fileID: 1617757787}
   VideoPanelStart: {fileID: 1330480426}
   DvPlayerStart: {fileID: 1626780020}
+  Nowlevel: 0
 --- !u!1 &196265415
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +322,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 148535225}
         m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
-        m_MethodName: Open01Scene
+        m_MethodName: Open01intro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

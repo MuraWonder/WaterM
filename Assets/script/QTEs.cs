@@ -12,7 +12,7 @@ public class QTEs : MonoBehaviour
     public int CountingDown;
     public int keyamount; //需要案的*
     public int Nowkey; //目前有的*
-    public int Nowtime; //幾次了 要不要讓人休息
+    public int CorrectKeyCount; //幾次了 要不要讓人休息
     public bool ishit;
     [Header("影藏物件")]
     public GameObject Hide;
@@ -23,7 +23,7 @@ public class QTEs : MonoBehaviour
         Hide.SetActive(false);
         Hide1.SetActive(false);
         keyamount = 5;
-        
+        CorrectKeyCount = 0;
     }
 
     // Update is called once per frame
@@ -31,10 +31,12 @@ public class QTEs : MonoBehaviour
     {   //生成要案的
        
      if(ishit==true){
-        
         Hide.SetActive(true);
         Hide1.SetActive(true);
-        Nowtime = 0;
+       if(CorrectKeyCount==3){
+        Stop();
+        CorrectKeyCount=0;
+        ishit = false;}
 
          if(WaitingForKey == 0){
          QTEGen = Random.Range(1,4);
@@ -63,13 +65,17 @@ public class QTEs : MonoBehaviour
                         CorrectKey = 1;
                         
                         Nowkey=0;
-                        Nowtime += 1;
+                        CorrectKeyCount +=1; Debug.Log("有加一次");
                         StartCoroutine(KeyPressing());
                     }
                 }
                 else{
-                    //CorrectKey = 2;
-                    //StartCoroutine(KeyPressing());
+                    // if(CorrectKeyCount==3){
+                    //     Stop();
+                    //     CorrectKeyCount=0;
+                    //     ishit = false;
+                        
+                    // }
                 }
             }
         }
@@ -77,12 +83,18 @@ public class QTEs : MonoBehaviour
             if(Input.anyKeyDown){
                 if(Input.GetButtonDown("9Key")){
                     CorrectKey = 1;
-                    Nowtime += 1;
+                    CorrectKeyCount +=1; Debug.Log("有加一次");
                     StartCoroutine(KeyPressing());
                 }
                 else{
                     //CorrectKey = 2;
                     //StartCoroutine(KeyPressing());
+                    //  if(CorrectKeyCount==3){
+                    //     Stop();
+                    //     CorrectKeyCount=0;
+                    //     ishit = false;
+                        
+                    // }
                 }
             }
         }
@@ -90,19 +102,25 @@ public class QTEs : MonoBehaviour
             if(Input.anyKeyDown){
                 if(Input.GetButtonDown("0Key")){
                     CorrectKey = 1;  //對的
-                    Nowtime += 1;
+                    CorrectKeyCount +=1; Debug.Log("有加一次");
                     StartCoroutine(KeyPressing());
+                    
+
                 }
                 else{
                     //CorrectKey = 2;  //錯的
                     //StartCoroutine(KeyPressing());
+                    //  if(CorrectKeyCount==3){
+                    //     Stop();
+                    //     CorrectKeyCount=0;
+                    //     ishit = false;
+                    // }
                 }
             }
         }
+         
      }
-    if(Nowtime == 3)
-    {   Debug.Log("3次瞜");
-         ishit = false;}
+    
         
      
 
@@ -131,6 +149,7 @@ public class QTEs : MonoBehaviour
             WaitingForKey = 0;
             CountingDown =1;
         }
+        
 
     }
     IEnumerator CountDown(){
@@ -148,4 +167,8 @@ public class QTEs : MonoBehaviour
         CountingDown =1;
      }
     }
+    public void Stop(){
+        Hide.SetActive(false);
+        Hide1.SetActive(false);
+    } 
 }
