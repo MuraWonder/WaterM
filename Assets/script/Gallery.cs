@@ -8,6 +8,10 @@ public class Gallery : MonoBehaviour
     public GameObject winB01;
     public GameObject winS02;
     public GameObject winB02;
+     public GameObject winS03;
+    public GameObject winB03;
+     public GameObject winS04;
+    public GameObject winB04;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +39,22 @@ public class Gallery : MonoBehaviour
     public void bM02(){
         winS02.SetActive(true); //小視窗回來
         winB02.SetActive(false); //大視窗不見
+    }
+      public void sM03(){
+        winB03.SetActive(true); //大視窗出現
+        winS03.SetActive(false); //小視窗不見
+    }
+    public void bM03(){
+        winS03.SetActive(true); //小視窗回來
+        winB03.SetActive(false); //大視窗不見
+    }
+      public void sM04(){
+        winB04.SetActive(true); //大視窗出現
+        winS04.SetActive(false); //小視窗不見
+    }
+    public void bM04(){
+        winS04.SetActive(true); //小視窗回來
+        winB04.SetActive(false); //大視窗不見
     }
      public void Menu()
     {

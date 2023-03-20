@@ -13,6 +13,7 @@ namespace Fungus
     public class MusicManager : MonoBehaviour
     {
         protected AudioSource audioSourceMusic;
+        //public AudioSource audioSourceMusic; //亂改的
         protected AudioSource audioSourceAmbiance;
         protected AudioSource audioSourceSoundEffect;
 

@@ -30,6 +30,9 @@ public class gameHandler : MonoBehaviour
             if(level ==2 ){
             UnityEngine.SceneManagement.SceneManager.LoadScene("End2");
             }
+            if(level ==3 ){
+            UnityEngine.SceneManagement.SceneManager.LoadScene("End3");
+            }
         }
         
         hasRunTime+=Time.deltaTime;

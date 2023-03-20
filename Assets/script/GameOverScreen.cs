@@ -13,6 +13,7 @@ public class GameOverScreen : MonoBehaviour
    public GameObject little;
    public GameObject Emoji;
    public GameObject YesNoIngame;
+   //public GameObject Talk;
    [SerializeField]
    public GameObject VideoPanel;
    public VideoPlayer DvPlayer;
@@ -21,7 +22,8 @@ public class GameOverScreen : MonoBehaviour
     // Start is called before the first frame update
   void Start(){
       
-    
+      ScoreSystem.theScore = 0;
+      ScoreSystem.theCollect = 0;
     Resume();
     }
   void Update(){
@@ -32,6 +34,9 @@ public class GameOverScreen : MonoBehaviour
           UI.SetActive(true);
           little.SetActive(false);
           Emoji.SetActive(false);
+        
+            //Talk.SetActive(false);
+          
       }
       if(isblack == false)
       {   UI.SetActive(false);

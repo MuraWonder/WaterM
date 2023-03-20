@@ -4616,7 +4616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EXT
+  m_Text: ESC
 --- !u!222 &926616748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5322,6 +5322,7 @@ MonoBehaviour:
   tokei: {fileID: 5359146719537979668}
   collectSound: {fileID: 43188474}
   hitSound: {fileID: 1615904572}
+  ShitSound: {fileID: 0}
   GameOverScreen: {fileID: 124541455}
   QTEs: {fileID: 0}
   BGMusic: {fileID: 1062754805}

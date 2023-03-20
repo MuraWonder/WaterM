@@ -52,5 +52,9 @@ public class EndTalk2 : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+    public void SkipTo02()
+    {   //去第二關
+        SceneManager.LoadScene("02");
+    }
 }
 

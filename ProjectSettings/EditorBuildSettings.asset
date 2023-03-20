@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/End2.unity
     guid: 29a809be514c93f4c9359b625b596716
   - enabled: 1
+    path: Assets/End3.unity
+    guid: 142e1013d8e87a14dac311cb2fc914da
+  - enabled: 1
     path: Assets/Talk01.unity
     guid: ef3591e4e22154449b23b1644a4e9939
   - enabled: 1

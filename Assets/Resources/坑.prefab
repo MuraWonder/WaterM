@@ -414,6 +414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PooPoo
       objectReference: {fileID: 0}
+    - target: {fileID: 5545747096225257978, guid: 5b4d2aba8b487dc41b2536b9d717327c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 5606083233008417211, guid: 5b4d2aba8b487dc41b2536b9d717327c, type: 3}
       propertyPath: m_RootOrder
       value: 2

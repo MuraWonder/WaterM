@@ -46,11 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b088b37988eb843a6917413461d894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemMax: 0
-  itemMin: 0
-  itemPrefabs: []
-  itemSpawnCenter: {x: 0, y: 0}
-  itemSpawnArea: {x: 0, y: 0}
+  itemMax: 1
+  itemMin: 1
+  itemPrefabs:
+  - {fileID: 7216009176185140991, guid: 0d820214b9d8d7a46a538b296ca1e4d8, type: 3}
+  itemSpawnCenter: {x: 15.2, y: -7.9}
+  itemSpawnArea: {x: 4, y: 3.99}
   Head: {fileID: 3289595543882037389}
   Tail: {fileID: 1317131857267058983}
 --- !u!1 &3639278446067477394

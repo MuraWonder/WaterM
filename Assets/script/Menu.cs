@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {   public GameObject YesNo;
     // Start is called before the first frame update
     void Start()
-    {
+    {   //AudioListener.pause = false;
         Resume();
     }
 

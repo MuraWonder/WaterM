@@ -13,7 +13,9 @@ public class EndCountScore : MonoBehaviour
     void Start()
     {
         ScoreEND.text = "SCORE:" + ScoreSystem.theScore.ToString();
+        PlayerPrefs.SetInt("此關分數",ScoreSystem.theScore);
         CollectEND.text = "x " + ScoreSystem.theCollect.ToString();
+        PlayerPrefs.SetInt("此關蒐集數",ScoreSystem.theCollect);
     }
 
     // Update is called once per frame

@@ -43,7 +43,7 @@ public class QTEs : MonoBehaviour
          CountingDown = 1;
 
          StartCoroutine (CountDown ());
-         if(QTEGen == 1){
+          if(QTEGen == 1){
             WaitingForKey =1;
             DisplayBox.GetComponent<Text>().text="8";
          }

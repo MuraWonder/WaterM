@@ -7,6 +7,7 @@ public class EndTalk : MonoBehaviour
 {
     [SerializeField] RectTransform Fader;
     // Start is called before the first frame update
+    
     private void Start()
     {   Fader.gameObject.SetActive(true);
         LeanTween.scale(Fader,new Vector3(1,1,1),0);
@@ -48,8 +49,15 @@ public class EndTalk : MonoBehaviour
     }
 
         public void Menu()
-    {
+    {   //WriterAudio.OnEnd();
+        //AudioListener.pause = true;
         SceneManager.LoadScene("Menu");
     }
+         public void Level()
+    {
+        SceneManager.LoadScene("SLevel");
+    }
+    
+    
 }
 

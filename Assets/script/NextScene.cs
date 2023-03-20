@@ -24,5 +24,9 @@ public class NextScene : MonoBehaviour
             {
                 SceneManager.LoadScene("End2");
             }
+        if (Input.GetKey(KeyCode.J))
+            {
+                SceneManager.LoadScene("End3");
+            }
     }
 }

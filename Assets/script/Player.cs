@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D RB;//防止翻轉
     public AudioSource collectSound;//播放蒐集的聲音
     public AudioSource hitSound;
+    public AudioSource ShitSound;
     public GameOverScreen GameOverScreen;//呼喚gameover的畫面
     public QTEs QTEs;//呼喚QTE的畫面
     
@@ -169,7 +170,7 @@ public class Player : MonoBehaviour
          if(other.gameObject.tag=="PlusPlus")
         {
             tokei.GetComponent<Timer>().currenttime += 5.0f;
-            collectSound.volume = 0.1f;
+            collectSound.volume = 0.7f;
             collectSound.Play();
             ScoreSystem.theScore += 500;
             ScoreSystem.theCollect += 1;
@@ -182,6 +183,7 @@ public class Player : MonoBehaviour
             StartCoroutine(SetAnimHit(1));
             tokei.GetComponent<Timer>().currenttime -= 3.0f;
             hitSound.Play();
+            hitSound.volume = 0.1f;
             Destroy(other.gameObject);
             StartCoroutine(SetEmotion(2)); //表情兩秒
             CameraShaker.Instance.ShakeOnce(4f,4f,1f,1f);
@@ -192,8 +194,8 @@ public class Player : MonoBehaviour
         {   
             StartCoroutine(SetAnimHit(1));
             tokei.GetComponent<Timer>().currenttime -= 0.0f;
-            hitSound.Play();
-            Destroy(other.gameObject);
+            ShitSound.Play();
+            //Destroy(other.gameObject);
             QTEs.GetComponent<QTEs>().ishit = true;
             StartCoroutine(SetEmotion(2)); //表情兩秒
             CameraShaker.Instance.ShakeOnce(4f,4f,1f,1f);
