@@ -78,12 +78,16 @@ public class Shop : MonoBehaviour
         }
     }
     public void clickOpenCG(){ 
-        
+             
             //p1.SetActive(true); 
-            //p2.SetActive(true); 
+            //p2.SetActive(true);  //開大窗
             //p3.SetActive(true); 
             //p4.SetActive(true); 
         CGW.SetActive(true);
+    }
+      public void clickCloseCG(){  //關閉大窗
+        
+        CGW.SetActive(false);
     }
      public void Open01(){ 
         
@@ -104,6 +108,18 @@ public class Shop : MonoBehaviour
      public void X01(){ 
         
             p1.SetActive(false); 
+    }
+      public void X02(){ 
+        
+            p2.SetActive(false); 
+    }
+      public void X03(){ 
+        
+            p3.SetActive(false); 
+    }
+      public void X04(){ 
+        
+            p4.SetActive(false); 
     }
 
 }

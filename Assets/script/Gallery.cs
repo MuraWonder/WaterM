@@ -60,4 +60,20 @@ public class Gallery : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+     public void XB01(){ 
+        
+            winB01.SetActive(false); 
+    }
+     public void XB02(){ 
+        
+            winB02.SetActive(false); 
+    }
+     public void XB03(){ 
+        
+            winB03.SetActive(false); 
+    }
+     public void XB04(){ 
+        
+            winB04.SetActive(false); 
+    }
 }
