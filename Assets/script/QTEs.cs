@@ -45,21 +45,21 @@ public class QTEs : MonoBehaviour
          StartCoroutine (CountDown ());
           if(QTEGen == 1){
             WaitingForKey =1;
-            DisplayBox.GetComponent<Text>().text="8";
+            DisplayBox.GetComponent<Text>().text="I"; //8
          }
           if(QTEGen == 2){
             WaitingForKey =1;
-            DisplayBox.GetComponent<Text>().text="9";
+            DisplayBox.GetComponent<Text>().text="L"; //9
          }
           if(QTEGen == 3){
             WaitingForKey =1;
-            DisplayBox.GetComponent<Text>().text="0";
+            DisplayBox.GetComponent<Text>().text="K"; //0
          }
         }
         
         if(QTEGen == 1){         //等待要按下
             if(Input.anyKeyDown){
-                if(Input.GetButtonDown("8Key")){
+                if(Input.GetButtonDown("IKey")){ //8Key
                     Nowkey +=1;
                     if(Nowkey == keyamount){
                         CorrectKey = 1;
@@ -81,7 +81,7 @@ public class QTEs : MonoBehaviour
         }
         if(QTEGen == 2){         //要按下的東西
             if(Input.anyKeyDown){
-                if(Input.GetButtonDown("9Key")){
+                if(Input.GetButtonDown("LKey")){ //"9Key"
                     CorrectKey = 1;
                     CorrectKeyCount +=1; Debug.Log("有加一次");
                     StartCoroutine(KeyPressing());
@@ -100,7 +100,7 @@ public class QTEs : MonoBehaviour
         }
         if(QTEGen == 3){         //要按下的東西
             if(Input.anyKeyDown){
-                if(Input.GetButtonDown("0Key")){
+                if(Input.GetButtonDown("KKey")){
                     CorrectKey = 1;  //對的
                     CorrectKeyCount +=1; Debug.Log("有加一次");
                     StartCoroutine(KeyPressing());

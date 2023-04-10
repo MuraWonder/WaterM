@@ -16,15 +16,15 @@ public class NextScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.V))
             {
                 SceneManager.LoadScene("End");
             }
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKey(KeyCode.B))
             {
                 SceneManager.LoadScene("End2");
             }
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.N))
             {
                 SceneManager.LoadScene("End3");
             }

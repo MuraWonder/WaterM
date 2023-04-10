@@ -99,6 +99,7 @@ public class Player : MonoBehaviour
             if(Input.GetKey(KeyCode.S))
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity -= Vector2.up*jumpHigh*.1f;
+                anim.Play("mainDown");
             }
             // if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             // {

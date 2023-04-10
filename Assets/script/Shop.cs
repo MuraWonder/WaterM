@@ -21,6 +21,7 @@ public class Shop : MonoBehaviour
     public GameObject p3;
     public GameObject p4;
     public GameObject CGW; //大視窗
+    public GameObject MUW; //音樂大視窗
     int ShopScore =0;
     //public Text ShopCollect;
     // Start is called before the first frame update
@@ -88,6 +89,14 @@ public class Shop : MonoBehaviour
       public void clickCloseCG(){  //關閉大窗
         
         CGW.SetActive(false);
+    }
+       public void clickOpenMU(){  //關閉大窗
+        
+        MUW.SetActive(true);
+    }
+      public void clickCloseMU(){  //關閉大窗
+        
+        MUW.SetActive(false);
     }
      public void Open01(){ 
         
