@@ -21,7 +21,7 @@ public class PlayerCanMove : MonoBehaviour
     {   
         anim = GetComponent<Animator>();
         originScale = transform.localScale;
-        StartCoroutine(SetUIHide2(4));
+        StartCoroutine(SetUIHide2(7));
     }
 
     // Update is called once per frame
