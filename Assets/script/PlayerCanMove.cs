@@ -78,6 +78,10 @@ public class PlayerCanMove : MonoBehaviour
     {
         SceneManager.LoadScene("02");
     }
+         public void to03()
+    {
+        SceneManager.LoadScene("03");
+    }
         public void toMenu()
     {
         SceneManager.LoadScene("Menu");

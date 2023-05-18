@@ -51,7 +51,7 @@ public class Menu : MonoBehaviour
     }
        public void Level03()
     {
-        SceneManager.LoadScene("03");
+        SceneManager.LoadScene("Talk03");
     }
        public void backtoMenu()
     {
