@@ -194,7 +194,7 @@ public class Player : MonoBehaviour
          if(other.gameObject.tag=="ObstacleS")
         {   
             StartCoroutine(SetAnimHit(1));
-            tokei.GetComponent<Timer>().currenttime -= 0.0f;
+            tokei.GetComponent<Timer>().currenttime -= 3.0f;
             ShitSound.Play();
             //Destroy(other.gameObject);
             QTEs.GetComponent<QTEs>().ishit = true;

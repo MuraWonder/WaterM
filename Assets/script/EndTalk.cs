@@ -30,7 +30,7 @@ public class EndTalk : MonoBehaviour
         Fader.gameObject.SetActive(true);
         LeanTween.scale(Fader,Vector3.zero,0f);
         LeanTween.scale(Fader,new Vector3(1,1,1),0.5f).setEase(LeanTweenType.easeOutExpo).setOnComplete(() => {
-            Invoke("ChangeScene",0.8f);
+            Invoke("ChangeScenet01",0.8f);
         });
     }
     
@@ -43,7 +43,7 @@ public class EndTalk : MonoBehaviour
       
   }
 
-    void ChangeScene()
+    void ChangeScenet01()
     {
         SceneManager.LoadScene("Talk01");
     }
@@ -56,6 +56,7 @@ public class EndTalk : MonoBehaviour
          public void Level()
     {
         SceneManager.LoadScene("SLevel");
+         
     }
     
     

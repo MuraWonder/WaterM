@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EndTalk3 : MonoBehaviour
-{
+{   
+    
     [SerializeField] RectTransform Fader;
     // Start is called before the first frame update
     private void Start()
-    {
+    {   
         Fader.gameObject.SetActive(true);
         LeanTween.scale(Fader,new Vector3(1,1,1),0);
         LeanTween.scale(Fader,Vector3.zero,1.5f).setEase(LeanTweenType.easeOutExpo).setOnComplete(() => {
@@ -30,7 +31,7 @@ public class EndTalk3 : MonoBehaviour
         Fader.gameObject.SetActive(true);
         LeanTween.scale(Fader,Vector3.zero,0f);
         LeanTween.scale(Fader,new Vector3(1,1,1),0.5f).setEase(LeanTweenType.easeOutExpo).setOnComplete(() => {
-            Invoke("ChangeScene",0.8f);
+            Invoke("ChangeScenet03e",0.8f);
         });
     }
     
@@ -43,7 +44,7 @@ public class EndTalk3 : MonoBehaviour
       
   }
 
-    void ChangeScene() 
+    void ChangeScenet03e() 
     {   //下一個
         SceneManager.LoadScene("Talk03E");
     }
@@ -54,7 +55,10 @@ public class EndTalk3 : MonoBehaviour
     }
       public void SkipTo03()
     {   //去第二關
+    
         SceneManager.LoadScene("03");
+        
+        
     }
 }
 
