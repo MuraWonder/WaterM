@@ -6,8 +6,9 @@ using UnityEngine.Video;
 
 
 
+
 public class GameOverScreen : MonoBehaviour
-{  public bool isblack = false;
+{  public bool isblack = false; //上方加入using Fungus;
    [Header("出現GG時會隱藏的UI")]
    public GameObject UI;
    public GameObject little;
@@ -20,11 +21,15 @@ public class GameOverScreen : MonoBehaviour
    [SerializeField]
    public int level; //選關卡
     // Start is called before the first frame update
+
+    //public string ChatName;
+    //private Flowchart flowchart;
   void Start(){
       
       ScoreSystem.theScore = 0;
       ScoreSystem.theCollect = 0;
     Resume();
+      //flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
     }
   void Update(){
       
@@ -116,9 +121,13 @@ public class GameOverScreen : MonoBehaviour
      Pause();
      
     }
-    void EndReached2(VideoPlayer DvPlayer)
+    public void EndReached2(VideoPlayer DvPlayer)
     {   VideoPanel.SetActive(false);
         isblack=true;
     }
+    // public void Htalk()
+    // {
+    //      flowchart.ExecuteBlock(ChatName);
+    // }
  
 }

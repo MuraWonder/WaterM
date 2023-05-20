@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using EZCameraShake;
 
+
 public class Player : MonoBehaviour
 {   //public GameObject player; //為了強制移動而加
     public Shake Shake;
@@ -205,8 +206,9 @@ public class Player : MonoBehaviour
         }
         if(other.gameObject.tag=="DeathZone")
         {   BGMusic.Stop();
+            //GameOverScreen.Htalk(); 打了直接無法觸發死亡zone
             GameOverScreen.DvideoFirst();
-
+            
         }
         
        
